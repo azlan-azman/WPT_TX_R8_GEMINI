@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Startup/startup_XMC1300.S
+

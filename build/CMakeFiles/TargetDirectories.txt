@@ -1,0 +1,3 @@
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/build/CMakeFiles/xmc1302_firmware.elf.dir
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/build/CMakeFiles/edit_cache.dir
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/build/CMakeFiles/rebuild_cache.dir
