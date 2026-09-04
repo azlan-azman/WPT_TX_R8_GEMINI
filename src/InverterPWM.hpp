@@ -12,6 +12,29 @@ class InverterPWM {
 private:
     uint32_t currentPeriod = 639; // 100 kHz at 64 MHz (640 total ticks)
 
+    // Decodes DAVE floating prescaler ticks
+    inline uint32_t decodeTicks(uint32_t cvReg, bool isIncrement) {
+        if (cvReg == 0) return 0;
+
+        uint32_t rawVal = cvReg & 0xFFFFU;
+        if (isIncrement) rawVal += 1U;
+
+        uint32_t fpcv = (cvReg >> 16U) & 0xFU;
+        uint32_t psc = 2U; // prescaler_initval = 2
+        uint32_t timer_val = 0;
+
+        if (fpcv > psc) {
+            uint32_t diff = fpcv - psc;
+            for (uint32_t i = diff; i > 0; i--) {
+                timer_val = (timer_val << 1U) + 0xFFFFU;
+            }
+            timer_val += (rawVal << diff);
+        } else {
+            timer_val = rawVal;
+        }
+        return timer_val;
+    }
+
 public:
     void init() {
         // 1. Configure Pin Multiplexing (P0.6 ALT4, P0.7 ALT5)
@@ -67,28 +90,33 @@ public:
 
         XMC_CCU8_SLICE_SetShadowTransferMode(CCU80_CC81, XMC_CCU8_SLICE_SHADOW_TRANSFER_MODE_ONLY_IN_PERIOD_MATCH);
 
+        // =====================================================================
         // 5. CCU40 SLICE 1 Config (Zero-Crossing Frequency Capture)
+        // =====================================================================
         XMC_CCU4_SLICE_CAPTURE_CONFIG_t cap_cfg = {};
         cap_cfg.fifo_enable       = 0U;
-        // CLEAR_NEVER: timer runs continuously so getCapturedPeriodNs() measures
-        // the full period. CLEAR_ALWAYS resets the timer on EVERY capture event,
-        // so only tiny inter-capture intervals are read instead of full periods.
-        cap_cfg.timer_clear_mode  = XMC_CCU4_SLICE_TIMER_CLEAR_MODE_NEVER;
-        cap_cfg.prescaler_mode    = XMC_CCU4_SLICE_PRESCALER_MODE_NORMAL;
-        cap_cfg.prescaler_initval = 0U;  // Divider = 2^(0+1) = 2  →  tick = 2/64MHz = 31.25ns
+        cap_cfg.timer_clear_mode  = XMC_CCU4_SLICE_TIMER_CLEAR_MODE_ALWAYS;
+        cap_cfg.prescaler_mode    = XMC_CCU4_SLICE_PRESCALER_MODE_FLOAT;
+        cap_cfg.prescaler_initval = 2U;
+        cap_cfg.float_limit       = 15U;
         XMC_CCU4_SLICE_CaptureInit(CCU40_CC41, &cap_cfg);
 
+        XMC_CCU4_SLICE_SetTimerPeriodMatch(CCU40_CC41, 0xFFFFU);
+
+        // Event 0 (Rising Edge) -> Low Register Set (CV0/CV1)
         XMC_CCU4_SLICE_EVENT_CONFIG_t cap_evt0 = {};
-        cap_evt0.mapped_input = XMC_CCU4_SLICE_INPUT_D;
+        cap_evt0.mapped_input = XMC_CCU4_SLICE_INPUT_A;                     // CONNECTED TO ERU0_IOUT0
         cap_evt0.edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE;
         XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC41, XMC_CCU4_SLICE_EVENT_0, &cap_evt0);
         XMC_CCU4_SLICE_Capture0Config(CCU40_CC41, XMC_CCU4_SLICE_EVENT_0);
 
-        // CRITICAL FIX: CCU41 (Slice 1) capture config (TC/CMC/PSC) lives in shadow
-        // registers. Per XMCLib docs, any CaptureInit must be succeeded by shadow
-        // transfer. Without this, the prescaler, event routing, and capture mode
-        // settings never reach the actual hardware — the capture timer never runs
-        // with the intended divider, so getCapturedPeriodNs() returns 0.
+        // Event 1 (Falling Edge) -> High Register Set (CV2/CV3)
+        XMC_CCU4_SLICE_EVENT_CONFIG_t cap_evt1 = {};
+        cap_evt1.mapped_input = XMC_CCU4_SLICE_INPUT_A;                     // CONNECTED TO ERU0_IOUT0
+        cap_evt1.edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE;
+        XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1, &cap_evt1);
+        XMC_CCU4_SLICE_Capture1Config(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1);
+
         XMC_CCU4_EnableShadowTransfer(CCU40, XMC_CCU4_SHADOW_TRANSFER_SLICE_1 |
                                            XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_1);
 
@@ -149,22 +177,30 @@ public:
 
         XMC_GPIO_SetOutputLow(PWM_EN_PORT, PWM_EN_PIN); // Enable Gate Driver
 
-        // Small delay to allow gate driver to fully enable
-        XMC_DelayUs(5);
+        XMC_DelayUs(50);
+
+        // Clear CV registers to reset flags before ping
+        (void)CCU40_CC41->CV[0];
+        (void)CCU40_CC41->CV[1];
+        (void)CCU40_CC41->CV[2];
+        (void)CCU40_CC41->CV[3];
 
         XMC_CCU4_SLICE_ClearTimer(CCU40_CC40);
         XMC_CCU8_SLICE_ClearTimer(CCU80_CC81);
         XMC_CCU4_SLICE_ClearTimer(CCU40_CC41);
 
-        // Explicitly start PWM timers AND capture timer
-        XMC_CCU4_SLICE_StartTimer(CCU40_CC40);
-        XMC_CCU8_SLICE_StartTimer(CCU80_CC81);
+        // Start CCU4 capture timer FIRST
         XMC_CCU4_SLICE_StartTimer(CCU40_CC41);
 
-        // Allow excitation pulse (50us at 20kHz = 1 period) to excite LC circuit,
-        // then wait for the tank to ring and trigger zero-crossing capture events.
-        // Increased from 150us to 1000us to ensure sufficient ring time for
-        // reliable capture even with high-Q LC tanks or detector propagation delay.
+        // Start PWM timers
+        XMC_CCU4_SLICE_StartTimer(CCU40_CC40);
+        XMC_CCU8_SLICE_StartTimer(CCU80_CC81);
+
+        // Trigger PWM hardware timers via SCU CCU trigger
+        XMC_SCU_SetCcuTriggerHigh(XMC_SCU_CCU_TRIGGER_CCU40 | XMC_SCU_CCU_TRIGGER_CCU80);
+        XMC_SCU_SetCcuTriggerLow(XMC_SCU_CCU_TRIGGER_CCU40 | XMC_SCU_CCU_TRIGGER_CCU80);
+
+        // Wait 1ms for the tank to ring and generate ACMP1 zero-crossings
         XMC_DelayUs(1000);
     }
 
@@ -174,31 +210,32 @@ public:
     }
 
     inline uint32_t getCapturedPeriodNs() {
-        // Read both capture registers and use the larger non-zero value.
-        // With CLEAR_NEVER mode the timer runs freely, so each register captures
-        // at a different zero-crossing edge. Taking the larger value gives the
-        // full period (two consecutive edges of the same polarity).
-        uint32_t regVal0 = XMC_CCU4_SLICE_GetCaptureRegisterValue(CCU40_CC41, 0);
-        uint32_t regVal1 = XMC_CCU4_SLICE_GetCaptureRegisterValue(CCU40_CC41, 1);
+        uint32_t capLow = 0;
+        uint32_t capHigh = 0;
 
-        uint32_t regVal = regVal0;
-        if (regVal == 0 || regVal1 > regVal0) {
-            regVal = regVal1;
+        // Get Latest Low Register Set (CV0 / CV1)
+        if (CCU40_CC41->CV[1] & CCU4_CC4_CV_FFL_Msk) {
+            capLow = CCU40_CC41->CV[1];
+        } else if (CCU40_CC41->CV[0] & CCU4_CC4_CV_FFL_Msk) {
+            capLow = CCU40_CC41->CV[0];
         }
 
-        return (regVal * 31U); // 31.25ns per tick at 64 MHz with prescaler divide-by-2 (PSIV=0)
-    }
-    
-    // Debug helper: Check if capture timer is running
-    // Timer value > 0 indicates the timer is counting
-    inline bool isCaptureActive() {
-        return (XMC_CCU4_SLICE_GetTimerValue(CCU40_CC41) != 0);
-    }
-    
-    // Debug helper: Get raw capture values for diagnostics
-    inline void getRawCaptures(uint32_t& cap0, uint32_t& cap1) {
-        cap0 = XMC_CCU4_SLICE_GetCaptureRegisterValue(CCU40_CC41, 0);
-        cap1 = XMC_CCU4_SLICE_GetCaptureRegisterValue(CCU40_CC41, 1);
+        // Get Latest High Register Set (CV2 / CV3)
+        if (CCU40_CC41->CV[3] & CCU4_CC4_CV_FFL_Msk) {
+            capHigh = CCU40_CC41->CV[3];
+        } else if (CCU40_CC41->CV[2] & CCU4_CC4_CV_FFL_Msk) {
+            capHigh = CCU40_CC41->CV[2];
+        }
+
+        // Return single edge ticks if only one register set captured, or full wave sum
+        uint32_t ticksLow  = decodeTicks(capLow, true);
+        uint32_t ticksHigh = decodeTicks(capHigh, false);
+        uint32_t totalTicks = ticksLow + ticksHigh;
+
+        if (totalTicks == 0) return 0;
+
+        // Base clock (64MHz) / prescaler_initval (2^2 = 4) -> 16 MHz -> 1 tick = 62.5 ns
+        return static_cast<uint32_t>(static_cast<float>(totalTicks) * 62.5f);
     }
 
     inline void start() {
