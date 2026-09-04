@@ -85,6 +85,15 @@ uint32_t getTickMs(void);
 #define DIP2_READ() 			XMC_GPIO_GetInput(DIP2_PORT, DIP2_PIN)
 
 // =============================================================================
+// ACMP1 Analog Comparator Input Pin (P2.7 = ACMP1_INP on XMC1302 TSSOP28)
+// =============================================================================
+// ACMP1 detects zero-crossings of the resonant tank voltage via the rectifier.
+// P2.7 must be in ANALOG mode (not GPIO) for the analog comparator to read it.
+// HW1 selection (ANACMP1) for P2.7 is set via the P2->HWSEL register.
+#define ACMP1_INP_PORT             XMC_GPIO_PORT2
+#define ACMP1_INP_PIN              7
+
+// =============================================================================
 // HARDWARE PIN INITIALIZATION HELPER
 // =============================================================================
 inline void Hardware_InitPins(void) {
@@ -113,4 +122,12 @@ inline void Hardware_InitPins(void) {
 
     // DIP3 Input Pin Mode
     XMC_GPIO_SetMode(DIP3_PORT, DIP3_PIN, XMC_GPIO_MODE_INPUT_TRISTATE);
+
+    // ACMP1 Analog Input (P2.7 = ACMP1_INP on XMC1302 TSSOP28)
+    // With INPUT_TRISTATE, digital input path is disabled so the analog comparator
+    // can read the pin voltage. P2.7 HWSEL HW3 (bits 6-7) must be 01 to select
+    // ANACMP1. Default is 00=ANACMP1, but we set explicitly for guaranteed routing.
+    XMC_GPIO_SetMode(ACMP1_INP_PORT, ACMP1_INP_PIN, XMC_GPIO_MODE_INPUT_TRISTATE);
+    ACMP1_INP_PORT->HWSEL = (ACMP1_INP_PORT->HWSEL & ~(0x3U << (2U * ACMP1_INP_PIN))) |
+                            (0x1U << (2U * ACMP1_INP_PIN));
 }

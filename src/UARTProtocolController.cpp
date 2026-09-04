@@ -243,6 +243,18 @@ void UARTProtocolController::process(uint32_t currentMs,
                                 if (flags & 0x08) {
                                     wptCtrl.saveEEPROM();
                                 }
+
+                                // 0x10: Exit auto-start countdown
+                                // Setting AutoStartDone alone is not enough — the
+                                // main loop only ticks the countdown while
+                                // (DisplayMenuID == 1 && !AutoStartDone). We must
+                                // also transition DisplayMenuID to 2 (the post-
+                                // countdown telemetry page) so the LCD leaves
+                                // the countdown screen.
+                                if (flags & 0x10) {
+                                    wptCtrl.AutoStartDone = true;
+                                    wptCtrl.DisplayMenuID = 2;
+                                }
                             }
                         }
                         // =========================================================
@@ -348,11 +360,13 @@ void UARTProtocolController::process(uint32_t currentMs,
                             txBuffer[87] = static_cast<uint8_t>((pInScaled >> 8) & 0xFF);
                             txBuffer[88] = static_cast<uint8_t>(pInScaled & 0xFF);
 
-                            uint32_t freqHz = static_cast<uint32_t>(wptCtrl.Resonant_Freq);
-                            txBuffer[89] = static_cast<uint8_t>((freqHz >> 24) & 0xFF);
-                            txBuffer[90] = static_cast<uint8_t>((freqHz >> 16) & 0xFF);
-                            txBuffer[91] = static_cast<uint8_t>((freqHz >> 8)  & 0xFF);
-                            txBuffer[92] = static_cast<uint8_t>(freqHz & 0xFF);
+                            // Send actual measured resonant frequency (actualResonantFreq in kHz, convert to Hz)
+                            // This is the filtered/averaged measured value from frequency capture
+                            uint32_t resFreqHz = static_cast<uint32_t>(wptCtrl.actualResonantFreq * 1000.0f);
+                            txBuffer[89] = static_cast<uint8_t>((resFreqHz >> 24) & 0xFF);
+                            txBuffer[90] = static_cast<uint8_t>((resFreqHz >> 16) & 0xFF);
+                            txBuffer[91] = static_cast<uint8_t>((resFreqHz >> 8)  & 0xFF);
+                            txBuffer[92] = static_cast<uint8_t>(resFreqHz & 0xFF);
 
                             txBuffer[93] = static_cast<uint8_t>(wptCtrl.fault);
 
