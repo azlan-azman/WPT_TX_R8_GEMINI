@@ -87,10 +87,6 @@ public:
     uint8_t  ResFreqCount;
     uint32_t last_captured_time;
     uint32_t lastPingTick;
-    uint32_t lastFreqValidationTick;  // For periodic re-validation of resonant frequency
-
-    // Periodic re-validation interval (ms) - set to 0 to disable auto re-validation
-    static constexpr uint32_t FREQ_VALIDATION_INTERVAL_MS = 5000U;
 
     // Asynchronous Flags
     volatile uint8_t I2C_TX_Done;
@@ -131,7 +127,7 @@ public:
           ResonantFreq_OK(false), OpFreq_OK(false), continuousRunningStarted(false),
           actualResonantFreq(0.0f), actual_TX_Max_Iout(60.0f),
           WPT_OPCODE(0x100), tempSecond(10), LED_R_Interval(0),
-          PrevResFreqAvg(0.0f), ResFreqAvg(0.0f), ResFreqCount(1), last_captured_time(0), lastPingTick(0), lastFreqValidationTick(0),
+          PrevResFreqAvg(0.0f), ResFreqAvg(0.0f), ResFreqCount(1), last_captured_time(0), lastPingTick(0),
           I2C_TX_Done(1), I2C_RX_Done(1), I2C_RST_required(0),
           DIP2_State(false), DIP3_State(false),
           state(SystemState::IDLE), fault(FaultReason::NONE),
@@ -391,7 +387,6 @@ public:
                     OpFreq_OK = false;
                     continuousRunningStarted = false;
                     lastPingTick = now - 200U; // Force immediate initial ping
-                    lastFreqValidationTick = now - FREQ_VALIDATION_INTERVAL_MS; // Force immediate re-validation cycle
                     state = SystemState::RUNNING;
                 }
                 break;
@@ -404,10 +399,7 @@ public:
                     state = SystemState::IDLE;
                 }
                 // Phase 1: Ping / Calibration Mode (AutoTune active OR frequency unvalidated)
-                // Also forces re-measurement periodically for continuous monitoring
-                else if (!ResonantFreq_OK || !OpFreq_OK || AutoTune
-                         || (FREQ_VALIDATION_INTERVAL_MS > 0U
-                             && now - lastFreqValidationTick >= FREQ_VALIDATION_INTERVAL_MS)) {
+                else if (!ResonantFreq_OK || !OpFreq_OK || AutoTune) {
                     continuousRunningStarted = false;
                     powerCtrl.reset();
 
@@ -418,15 +410,6 @@ public:
                         checkResonantFreq();
                         checkOpFreq();
                         inverter.stop(); // Remain stopped between pings
-                    }
-
-                    // Update validation tick only when we actually completed a measurement cycle
-                    if (FREQ_VALIDATION_INTERVAL_MS > 0U
-                        && now - lastFreqValidationTick >= FREQ_VALIDATION_INTERVAL_MS) {
-                        lastFreqValidationTick = now;
-                        // Force re-validation next cycle by clearing OK flags
-                        ResonantFreq_OK = false;
-                        OpFreq_OK = false;
                     }
                 }
                 // Phase 2: Verified Resonant Frequency -> Continuous Power Transfer

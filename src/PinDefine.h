@@ -103,6 +103,8 @@ inline void Hardware_InitPins(void) {
     XMC_GPIO_SetMode(LED1_PORT, LED1_PIN, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
     XMC_GPIO_SetMode(LED2_PORT, LED2_PIN, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
 
+    XMC_GPIO_SetOutputHigh(PWM_EN_PORT, PWM_EN_PIN); // Disable Gate Driver
+
     // PWM Pin Modes
     XMC_GPIO_SetMode(PWM_LEG_A_PORT, PWM_LEG_A_PIN, PWM_LEG_A_AF);
     XMC_GPIO_SetMode(PWM_LEG_B_PORT, PWM_LEG_B_PIN, PWM_LEG_B_AF);

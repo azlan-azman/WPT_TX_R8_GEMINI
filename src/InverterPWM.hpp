@@ -105,14 +105,14 @@ public:
 
         // Event 0 (Rising Edge) -> Low Register Set (CV0/CV1)
         XMC_CCU4_SLICE_EVENT_CONFIG_t cap_evt0 = {};
-        cap_evt0.mapped_input = XMC_CCU4_SLICE_INPUT_A;                     // CONNECTED TO ERU0_IOUT0
+        cap_evt0.mapped_input = XMC_CCU4_SLICE_INPUT_D;                     // CONNECTED TO ERU0_IOUT0
         cap_evt0.edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_RISING_EDGE;
         XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC41, XMC_CCU4_SLICE_EVENT_0, &cap_evt0);
         XMC_CCU4_SLICE_Capture0Config(CCU40_CC41, XMC_CCU4_SLICE_EVENT_0);
 
         // Event 1 (Falling Edge) -> High Register Set (CV2/CV3)
         XMC_CCU4_SLICE_EVENT_CONFIG_t cap_evt1 = {};
-        cap_evt1.mapped_input = XMC_CCU4_SLICE_INPUT_A;                     // CONNECTED TO ERU0_IOUT0
+        cap_evt1.mapped_input = XMC_CCU4_SLICE_INPUT_D;                     // CONNECTED TO ERU0_IOUT0
         cap_evt1.edge         = XMC_CCU4_SLICE_EVENT_EDGE_SENSITIVITY_FALLING_EDGE;
         XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1, &cap_evt1);
         XMC_CCU4_SLICE_Capture1Config(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1);
@@ -210,31 +210,30 @@ public:
     }
 
     inline uint32_t getCapturedPeriodNs() {
-        uint32_t capLow = 0;
-        uint32_t capHigh = 0;
-
-        // Get Latest Low Register Set (CV0 / CV1)
-        if (CCU40_CC41->CV[1] & CCU4_CC4_CV_FFL_Msk) {
-            capLow = CCU40_CC41->CV[1];
-        } else if (CCU40_CC41->CV[0] & CCU4_CC4_CV_FFL_Msk) {
+        // Direct read of low capture set (CV1/CV0)
+        uint32_t capLow = CCU40_CC41->CV[1];
+        if ((capLow & 0xFFFFU) == 0) {
             capLow = CCU40_CC41->CV[0];
         }
 
-        // Get Latest High Register Set (CV2 / CV3)
-        if (CCU40_CC41->CV[3] & CCU4_CC4_CV_FFL_Msk) {
-            capHigh = CCU40_CC41->CV[3];
-        } else if (CCU40_CC41->CV[2] & CCU4_CC4_CV_FFL_Msk) {
+        // Direct read of high capture set (CV3/CV2)
+        uint32_t capHigh = CCU40_CC41->CV[3];
+        if ((capHigh & 0xFFFFU) == 0) {
             capHigh = CCU40_CC41->CV[2];
         }
 
-        // Return single edge ticks if only one register set captured, or full wave sum
-        uint32_t ticksLow  = decodeTicks(capLow, true);
-        uint32_t ticksHigh = decodeTicks(capHigh, false);
+        uint32_t ticksLow   = decodeTicks(capLow, true);
+        uint32_t ticksHigh  = decodeTicks(capHigh, false);
         uint32_t totalTicks = ticksLow + ticksHigh;
+
+        // Fallback to single-edge ticks if full-wave sum is incomplete
+        if (totalTicks == 0) {
+            totalTicks = ticksLow ? ticksLow : ticksHigh;
+        }
 
         if (totalTicks == 0) return 0;
 
-        // Base clock (64MHz) / prescaler_initval (2^2 = 4) -> 16 MHz -> 1 tick = 62.5 ns
+        // Base clock (64 MHz) / prescaler_initval (2^2 = 4) -> 16 MHz -> 1 tick = 62.5 ns
         return static_cast<uint32_t>(static_cast<float>(totalTicks) * 62.5f);
     }
 
