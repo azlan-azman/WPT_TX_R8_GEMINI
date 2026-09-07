@@ -54,6 +54,8 @@ void LCDOutput::LcdOutput(void) {
     int vIn_dec  = static_cast<int>((currentTelemetry.vIn - vIn_int) * 100);
     int temp_int = static_cast<int>(currentTelemetry.tempC);
     int rf_int   = static_cast<int>(WPT_Controller1.actualResonantFreq);
+    int iOutLimit_int = static_cast<int>(WPT_Controller1.Iout_Limit);
+    int iOutLimit_dec = static_cast<int>(lroundf(WPT_Controller1.Iout_Limit * 100.0f) % 100);
 
     switch (GetKey) {
         case 110:
@@ -148,7 +150,11 @@ void LCDOutput::LcdOutput(void) {
             sprintf(Row1, "Timer : %d    ", static_cast<int>(WPT_Controller1.AutoStarTimer));
             break;
         case 900:
-        	sprintf(Row1, "Io :%6.2f ", WPT_Controller1.Iout_Limit);
+            if (WPT_Controller1.Iout_Limit < 0) {
+                sprintf(Row1, "Io :%s%d.%02d ", "-", -iOutLimit_int, -iOutLimit_dec);
+            } else {
+                sprintf(Row1, "Io :%s%d.%02d ", "", iOutLimit_int, iOutLimit_dec);
+            }
             break;
         case 1000:
             sprintf(Row1, "Duty_Cycle : %d", WPT_Controller1.eePWMDutyCycle);
