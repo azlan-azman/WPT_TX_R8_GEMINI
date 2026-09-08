@@ -383,8 +383,8 @@ public:
             case SystemState::IDLE:
                 if (PWM_EN_STATE) {
                     PrevResFreqAvg = 0.0f;
-                    ResonantFreq_OK = false;
-                    OpFreq_OK = false;
+                    ResonantFreq_OK = true;
+                    OpFreq_OK = true;
                     continuousRunningStarted = false;
                     lastPingTick = now - 200U; // Force immediate initial ping
                     state = SystemState::RUNNING;

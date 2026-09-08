@@ -54,11 +54,15 @@ public:
         XMC_CCU8_Init(CCU80, XMC_CCU8_SLICE_MCMS_ACTION_TRANSFER_PR_CR);
         XMC_CCU8_EnableClock(CCU80, 1); // Slice 1 for PWM Leg B
 
-        // 3. CCU40 SLICE 0 Config (Leg A - P0.6)
+        // =====================================================================
+        // 3. CCU40 SLICE 0 Config (Leg A - P0.6 + VADC Iout Trigger Out)
+        // =====================================================================
         XMC_CCU4_SLICE_COMPARE_CONFIG_t ccu4_cfg = {};
-        ccu4_cfg.timer_mode    = XMC_CCU4_SLICE_TIMER_COUNT_MODE_EA;
-        ccu4_cfg.monoshot      = XMC_CCU4_SLICE_TIMER_REPEAT_MODE_REPEAT;
-        ccu4_cfg.passive_level = XMC_CCU4_SLICE_OUTPUT_PASSIVE_LEVEL_LOW;
+        ccu4_cfg.timer_mode        = XMC_CCU4_SLICE_TIMER_COUNT_MODE_EA;
+        ccu4_cfg.monoshot          = XMC_CCU4_SLICE_TIMER_REPEAT_MODE_REPEAT;
+        ccu4_cfg.passive_level     = XMC_CCU4_SLICE_OUTPUT_PASSIVE_LEVEL_LOW;
+        ccu4_cfg.prescaler_mode    = XMC_CCU4_SLICE_PRESCALER_MODE_NORMAL;
+        ccu4_cfg.prescaler_initval = 0U;
         XMC_CCU4_SLICE_CompareInit(CCU40_CC40, &ccu4_cfg);
         XMC_CCU4_SLICE_SetTimerPeriodMatch(CCU40_CC40, currentPeriod);
 
@@ -69,7 +73,13 @@ public:
         XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC40, XMC_CCU4_SLICE_EVENT_0, &ccu4_evt0);
         XMC_CCU4_SLICE_StartConfig(CCU40_CC40, XMC_CCU4_SLICE_EVENT_0, XMC_CCU4_SLICE_START_MODE_TIMER_START_CLEAR);
 
+        // Bind Period Match event to SR2 (XMC_CCU4_SLICE_SR_ID_2) to trigger VADC Iout scan on REQ_TR_A
+        XMC_CCU4_SLICE_SetInterruptNode(CCU40_CC40, XMC_CCU4_SLICE_IRQ_ID_PERIOD_MATCH, XMC_CCU4_SLICE_SR_ID_2);
+        XMC_CCU4_SLICE_EnableEvent(CCU40_CC40, XMC_CCU4_SLICE_IRQ_ID_PERIOD_MATCH);
+
+        // =====================================================================
         // 4. CCU80 SLICE 1 Config (Leg B - P0.7)
+        // =====================================================================
         XMC_CCU8_SLICE_COMPARE_CONFIG_t ccu8_cfg = {};
         ccu8_cfg.timer_mode         = XMC_CCU8_SLICE_TIMER_COUNT_MODE_EA;
         ccu8_cfg.monoshot           = XMC_CCU8_SLICE_TIMER_REPEAT_MODE_REPEAT;
@@ -117,8 +127,9 @@ public:
         XMC_CCU4_SLICE_ConfigureEvent(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1, &cap_evt1);
         XMC_CCU4_SLICE_Capture1Config(CCU40_CC41, XMC_CCU4_SLICE_EVENT_1);
 
-        XMC_CCU4_EnableShadowTransfer(CCU40, XMC_CCU4_SHADOW_TRANSFER_SLICE_1 |
-                                           XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_1);
+        XMC_CCU4_EnableShadowTransfer(CCU40, XMC_CCU4_SHADOW_TRANSFER_SLICE_0 |
+                                             XMC_CCU4_SHADOW_TRANSFER_SLICE_1 |
+                                             XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_1);
 
         // 6. Start Prescalers
         XMC_CCU4_StartPrescaler(CCU40);
