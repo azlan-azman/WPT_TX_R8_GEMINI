@@ -416,8 +416,8 @@ public:
                 else {
                     if (!continuousRunningStarted) {
                         inverter.setFrequency(Resonant_Freq);
-                        inverter.setEffectiveDuty(0.0f);
-                        powerCtrl.startRamp(0.0f, static_cast<float>(eePWMDutyCycle), 0.500f);
+                        inverter.setEffectiveDuty(1500.0f);
+                        powerCtrl.startRamp(1500.0f, static_cast<float>(eePWMDutyCycle), 0.500f);
                         inverter.start();
                         continuousRunningStarted = true;
                     }

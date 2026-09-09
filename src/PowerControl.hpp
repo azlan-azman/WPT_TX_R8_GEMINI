@@ -4,8 +4,8 @@
 
 class PowerControl {
 private:
-    float currentDuty = 1500.0f;
-    float targetDuty  = 3000.0f;
+    float currentDuty = 1500.0f; // 15.00% default matching WPTController.cpp
+    float targetDuty  = 1500.0f;
     float rampRate    = 0.0f;
     bool  ramping     = false;
 
