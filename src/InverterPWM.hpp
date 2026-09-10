@@ -53,7 +53,9 @@ public:
         XMC_CCU8_Init(CCU80, XMC_CCU8_SLICE_MCMS_ACTION_TRANSFER_PR_CR);
         XMC_CCU8_EnableClock(CCU80, 1); // Slice 1 for PWM Leg B
 
-        // 3. CCU40 SLICE 0 Config (Leg A - P0.6)
+        // =====================================================================
+        // 3. CCU40 SLICE 0 Config (Leg A - P0.6, Matches pwm_ccu4_conf.c)
+        // =====================================================================
         XMC_CCU4_SLICE_COMPARE_CONFIG_t ccu4_cfg = {};
         ccu4_cfg.timer_mode        = XMC_CCU4_SLICE_TIMER_COUNT_MODE_EA;
         ccu4_cfg.monoshot          = XMC_CCU4_SLICE_TIMER_REPEAT_MODE_REPEAT;
@@ -74,7 +76,9 @@ public:
         XMC_CCU4_SLICE_SetInterruptNode(CCU40_CC40, XMC_CCU4_SLICE_IRQ_ID_PERIOD_MATCH, XMC_CCU4_SLICE_SR_ID_2);
         XMC_CCU4_SLICE_EnableEvent(CCU40_CC40, XMC_CCU4_SLICE_IRQ_ID_PERIOD_MATCH);
 
-        // 4. CCU80 SLICE 1 Config (Leg B - P0.7)
+        // =====================================================================
+        // 4. CCU80 SLICE 1 Config (Leg B - P0.7, Matches pwm_ccu8_conf.c)
+        // =====================================================================
         XMC_CCU8_SLICE_COMPARE_CONFIG_t ccu8_cfg = {};
         ccu8_cfg.timer_mode         = XMC_CCU8_SLICE_TIMER_COUNT_MODE_EA;
         ccu8_cfg.monoshot           = XMC_CCU8_SLICE_TIMER_REPEAT_MODE_REPEAT;
@@ -95,7 +99,9 @@ public:
 
         XMC_CCU8_SLICE_SetShadowTransferMode(CCU80_CC81, XMC_CCU8_SLICE_SHADOW_TRANSFER_MODE_ONLY_IN_PERIOD_MATCH);
 
+        // =====================================================================
         // 5. CCU40 SLICE 1 Config (Zero-Crossing Frequency Capture)
+        // =====================================================================
         XMC_CCU4_SLICE_CAPTURE_CONFIG_t cap_cfg = {};
         cap_cfg.fifo_enable       = 0U;
         cap_cfg.timer_clear_mode  = XMC_CCU4_SLICE_TIMER_CLEAR_MODE_ALWAYS;
@@ -144,30 +150,32 @@ public:
         XMC_CCU8_EnableShadowTransfer(CCU80, XMC_CCU8_SHADOW_TRANSFER_SLICE_1);
     }
 
-    // Symmetrical 180-Degree Anti-Phase Duty Modulation
+    // Benchmark-Matched Non-Overlapping Asymmetric Duty Modulation
     inline void setEffectiveDuty(float dutyVal) {
         uint32_t dutyBP = (dutyVal <= 50.0f) ? static_cast<uint32_t>(dutyVal * 100.0f) : static_cast<uint32_t>(dutyVal);
         if (dutyBP > 5000U) dutyBP = 5000U; // 50.00% max per leg
 
         uint32_t totalTicks = currentPeriod + 1U; // 640 total ticks
-        uint32_t halfPeriod = totalTicks / 2U;    // 320 ticks (180 degrees)
 
         uint32_t legTicks = (dutyBP * totalTicks) / 10000U; // 96 ticks for 15% duty
-        if (legTicks > halfPeriod) legTicks = halfPeriod;
+        if (legTicks > (totalTicks / 2U)) legTicks = totalTicks / 2U;
 
         if (dutyBP == 0U || legTicks == 0U) {
-            XMC_CCU4_SLICE_SetTimerCompareMatch(CCU40_CC40, 0U);
-            XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_1, static_cast<uint16_t>(halfPeriod));
-            XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_2, static_cast<uint16_t>(halfPeriod));
+            XMC_CCU4_SLICE_SetTimerCompareMatch(CCU40_CC40, static_cast<uint16_t>(totalTicks));
+            XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_1, static_cast<uint16_t>(totalTicks / 2U));
+            XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_2, static_cast<uint16_t>(totalTicks / 2U));
         } else {
-            // Leg A (P0.6): Active HIGH from tick 0 to legTicks (Ticks 0 -> 96)
-            XMC_CCU4_SLICE_SetTimerCompareMatch(CCU40_CC40, static_cast<uint16_t>(legTicks));
+            // Leg A (P0.6, CCU40_CC40): Matches PWM_CCU4_SetDutyCycle math
+            // HIGH from tick 544 to 640 (15% ON duration at cycle end)
+            uint16_t ccu4Comp = static_cast<uint16_t>(totalTicks - legTicks);
+            XMC_CCU4_SLICE_SetTimerCompareMatch(CCU40_CC40, ccu4Comp);
 
-            // Leg B (P0.7): Active HIGH from 180 deg (halfPeriod) to (180 deg + legTicks)
-            // Active HIGH from 50% -> 65% (Ticks 320 -> 416)
-            // Exactly 35% freewheeling space (224 ticks) on both sides of every pulse!
-            uint16_t cr1 = static_cast<uint16_t>(halfPeriod);
-            uint16_t cr2 = static_cast<uint16_t>(halfPeriod + legTicks - 1U);
+            // Leg B (P0.7, CCU80_CC81): Matches PWM_CCU8_SetDutyCycleAsymmetric math
+            // HIGH from tick 224 to 320 (15% ON duration before cycle midpoint)
+            uint32_t shiftBP = (dutyBP <= 5000U) ? (5000U - dutyBP) : 0U;
+            uint16_t cr1 = static_cast<uint16_t>((totalTicks * shiftBP) / 10000U);
+            uint16_t cr2 = static_cast<uint16_t>((totalTicks * 5000U) / 10000U);
+            if (cr2 > 0U) cr2 -= 1U;
 
             XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_1, cr1);
             XMC_CCU8_SLICE_SetTimerCompareMatch(CCU80_CC81, XMC_CCU8_SLICE_COMPARE_CHANNEL_2, cr2);
@@ -239,7 +247,8 @@ public:
     }
 
     inline void start() {
-        XMC_CCU4_SLICE_StopTimer(CCU40_CC41); // Stop capture slice
+        // Matches WPTController.cpp Start_PWM_Output() execution order
+        XMC_CCU4_SLICE_StopTimer(CCU40_CC41); // CAPTURE_Stop(&CAPTURE_0)
 
         restoreRepeatMode();
 
@@ -252,11 +261,11 @@ public:
         XMC_SCU_SetCcuTriggerHigh(XMC_SCU_CCU_TRIGGER_CCU40 | XMC_SCU_CCU_TRIGGER_CCU80);
         XMC_SCU_SetCcuTriggerLow(XMC_SCU_CCU_TRIGGER_CCU40 | XMC_SCU_CCU_TRIGGER_CCU80);
 
-        XMC_GPIO_SetOutputLow(PWM_EN_PORT, PWM_EN_PIN); // Enable Gate Driver
+        XMC_GPIO_SetOutputLow(PWM_EN_PORT, PWM_EN_PIN); // DIGITAL_IO_SetOutputLow(&PWM_EN)
     }
 
     inline void stop() {
-        XMC_GPIO_SetOutputHigh(PWM_EN_PORT, PWM_EN_PIN); // Disable Gate Driver
+        XMC_GPIO_SetOutputHigh(PWM_EN_PORT, PWM_EN_PIN); // DIGITAL_IO_SetOutputHigh(&PWM_EN)
         XMC_CCU4_SLICE_StopTimer(CCU40_CC40);
         XMC_CCU8_SLICE_StopTimer(CCU80_CC81);
         XMC_CCU4_SLICE_StopTimer(CCU40_CC41);
