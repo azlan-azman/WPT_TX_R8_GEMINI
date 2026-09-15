@@ -1,5 +1,6 @@
 #include "UARTProtocolController.hpp"
 #include "xmc_flash.h"
+#include "xmc_wdt.h" // Service Watchdog Timer
 #include "eeprom.h"
 
 #define STAGING_START_ADDR 0x1001B000U
@@ -8,22 +9,39 @@
 
 extern "C" void execute_sram_swap(uint32_t dstAddr, uint32_t srcAddr, uint32_t imageSize);
 
+UARTProtocolController* UARTProtocolController::p_instance = nullptr;
+
 UARTProtocolController::UARTProtocolController()
     : currentState(UART_STATE::RECEIVE_LEN),
       funcID(0),
       transID(0),
       expectedBodyLen(0),
       rxCount(0),
-      lastActivityTimer(0) {
+      lastActivityTimer(0),
+      silenceTimer(0) {
+    p_instance = this;
     memset(rxBuffer, 0, sizeof(rxBuffer));
     memset(txBuffer, 0, sizeof(txBuffer));
 }
 
-UARTProtocolController::~UARTProtocolController() {}
+UARTProtocolController::~UARTProtocolController() {
+    if (p_instance == this) {
+        p_instance = nullptr;
+    }
+}
 
 void UARTProtocolController::pushRxByte(uint8_t byte) {
     if (rxCount < sizeof(rxBuffer)) {
         rxBuffer[rxCount++] = byte;
+    }
+}
+
+void UARTProtocolController::process_rec(char *lcd, const uint8_t *pData) {
+    if (!lcd || !pData) return;
+    for (int i = 0; i < 22; ++i) {
+        *lcd = *pData + 48;
+        lcd++;
+        pData++;
     }
 }
 
@@ -34,14 +52,44 @@ void UARTProtocolController::resetBus(uint32_t currentMs) {
 
     rxCount = 0;
     lastActivityTimer = currentMs;
-    currentState = UART_STATE::RECEIVE_LEN;
+    silenceTimer = currentMs;
+    currentState = UART_STATE::SILENCE;
     __enable_irq();
+}
+
+void UARTProtocolController::transmitBuffer(const uint8_t *buffer, size_t len) {
+    if (!buffer || len == 0) return;
+    for (size_t i = 0; i < len; ++i) {
+        while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) {
+            __NOP();
+        }
+        XMC_UART_CH_Transmit(XMC_UART0_CH0, buffer[i]);
+    }
+}
+
+void UARTProtocolController::transmitSplitBuffer(const uint8_t *buffer, size_t totalLen) {
+    if (!buffer || totalLen < 3) return;
+
+    // 1. Transmit 3-Byte Header (LenMSB, LenLSB, HeaderCRC)
+    transmitBuffer(buffer, 3);
+
+    // 2. 1.5ms Inter-chunk pause: Allows STM32 main loop to process Case 50
+    //    and arm HAL_UART_Receive_IT for the body without dropping bytes.
+    for (volatile uint32_t i = 0; i < 22000U; ++i) {
+        __NOP();
+    }
+
+    // 3. Transmit remaining Body bytes
+    if (totalLen > 3) {
+        transmitBuffer(&buffer[3], totalLen - 3);
+    }
 }
 
 void UARTProtocolController::process(uint32_t currentMs,
                                      InverterPWM &inverter,
                                      WPT_Controller &wptCtrl,
                                      const Telemetry &telemetry) {
+    // Clear USIC UART line noise or stop bit errors
     uint32_t status = XMC_UART_CH_GetStatusFlag(XMC_UART0_CH0);
     if (status & (XMC_UART_CH_STATUS_FLAG_RECEIVER_NOISE_DETECTED |
                   XMC_UART_CH_STATUS_FLAG_FORMAT_ERROR_IN_STOP_BIT_0 |
@@ -59,13 +107,28 @@ void UARTProtocolController::process(uint32_t currentMs,
         __enable_irq();
 
         switch (currentState) {
+            case UART_STATE::SILENCE: {
+                // 500ms silence recovery window matching UART_OLI
+                if (currentMs - silenceTimer >= 500U) {
+                    __disable_irq();
+                    XMC_USIC_CH_TXFIFO_Flush(XMC_UART0_CH0);
+                    XMC_USIC_CH_RXFIFO_Flush(XMC_UART0_CH0);
+                    rxCount = 0;
+                    lastActivityTimer = currentMs;
+                    currentState = UART_STATE::RECEIVE_LEN;
+                    stateChanged = true;
+                    __enable_irq();
+                }
+                break;
+            }
+
             case UART_STATE::RECEIVE_LEN: {
                 if (currentRxCount >= FIRST_RX_LEN) {
+                    // 1. Validate 4-Byte RX Header CRC (bytes 0..2 vs byte 3)
                     uint8_t headerCrc = calculateCRC(rxBuffer, 3);
                     if (rxBuffer[3] == headerCrc) {
                         funcID          = rxBuffer[0];
                         expectedBodyLen = (static_cast<uint16_t>(rxBuffer[1]) << 8) | rxBuffer[2];
-                        transID         = rxBuffer[3];
 
                         __disable_irq();
                         memmove(rxBuffer, &rxBuffer[FIRST_RX_LEN], rxCount - FIRST_RX_LEN);
@@ -76,34 +139,37 @@ void UARTProtocolController::process(uint32_t currentMs,
                         currentState = UART_STATE::RECEIVE_BODY;
                         stateChanged = true;
                     } else {
+                        // Header CRC mismatch -> enter SILENCE state
                         __disable_irq();
                         memmove(rxBuffer, &rxBuffer[1], rxCount - 1);
                         rxCount--;
                         __enable_irq();
 
-                        if (rxCount >= FIRST_RX_LEN) {
-                            stateChanged = true;
-                        }
+                        resetBus(currentMs);
                     }
                 }
                 break;
             }
 
             case UART_STATE::RECEIVE_BODY: {
-                if (currentMs - lastActivityTimer > 50U) {
+                // Timeout check
+                if (currentMs - lastActivityTimer > 500U) {
                     resetBus(currentMs);
                     break;
                 }
 
-                if (expectedBodyLen == 0 || expectedBodyLen > 320) {
+                if (expectedBodyLen == 0 || expectedBodyLen > 320U) {
                     resetBus(currentMs);
                     break;
                 }
 
                 if (currentRxCount >= expectedBodyLen) {
+                    // 2. Validate Body CRC (bytes 0..expectedBodyLen-2 vs last byte)
                     uint8_t bodyCrc = calculateCRC(rxBuffer, expectedBodyLen - 1);
                     if (rxBuffer[expectedBodyLen - 1] == bodyCrc) {
+                        // transID is byte 0 of the body payload (matching UART_OLI)
                         transID = rxBuffer[0];
+
                         bool isStagingCommand  = false;
                         bool isDiagLogRequest  = false;
                         bool isReadbackCommand = false;
@@ -117,16 +183,28 @@ void UARTProtocolController::process(uint32_t currentMs,
                             // --- OPCODE 0xFFF0: ERASE STAGING FLASH ---
                             if (newOpcode == 0xFFF0) {
                                 isStagingCommand = true;
-                                uint32_t totalImageSize = (static_cast<uint32_t>(rxBuffer[4]) << 24) |
-                                                          (static_cast<uint32_t>(rxBuffer[5]) << 16) |
-                                                          (static_cast<uint32_t>(rxBuffer[6]) << 8)  |
-                                                           static_cast<uint32_t>(rxBuffer[7]);
 
-                                uint32_t addr = STAGING_START_ADDR;
-                                uint32_t end  = STAGING_START_ADDR + totalImageSize;
-                                while (addr < end) {
-                                    XMC_FLASH_EraseSector(reinterpret_cast<uint32_t*>(addr));
-                                    addr += 4096U;
+                                // Disarm PWM inverter and cancel auto-start countdown
+                                inverter.stop();
+                                wptCtrl.PWM_EN_STATE = false;
+                                wptCtrl.AutoStartDone = true;
+                                wptCtrl.DisplayMenuID = 2;
+
+                                uint32_t totalImageSize = (static_cast<uint32_t>(rxBuffer[4]) << 24) |
+                                                        (static_cast<uint32_t>(rxBuffer[5]) << 16) |
+                                                        (static_cast<uint32_t>(rxBuffer[6]) << 8)  |
+                                                        static_cast<uint32_t>(rxBuffer[7]);
+
+                                // Fast-path: Skip 1.1s sector erase if staging flash is already erased (0xFFFFFFFF)
+                                volatile uint32_t* pStaging = reinterpret_cast<volatile uint32_t*>(STAGING_START_ADDR);
+                                if (*pStaging != 0xFFFFFFFFU) {
+                                    uint32_t addr = STAGING_START_ADDR;
+                                    uint32_t end  = STAGING_START_ADDR + totalImageSize;
+                                    while (addr < end) {
+                                        XMC_FLASH_EraseSector(reinterpret_cast<uint32_t*>(addr));
+                                        XMC_WDT_Service(); // Prevent watchdog reset during sector erase
+                                        addr += 4096U;
+                                    }
                                 }
 
                                 SRAM_SIZE_ADDR = totalImageSize;
@@ -166,7 +244,7 @@ void UARTProtocolController::process(uint32_t currentMs,
                                     totalImageSize = 74240U;
                                 }
 
-                                // Send ACK frame back to Flasher before swap
+                                // Send 6-byte ACK frame back to Flasher before swap
                                 memset(txBuffer, 0, sizeof(txBuffer));
                                 txBuffer[0] = 0x00;
                                 txBuffer[1] = 0x05;
@@ -175,38 +253,36 @@ void UARTProtocolController::process(uint32_t currentMs,
                                 txBuffer[4] = 0x55;
                                 txBuffer[5] = calculateCRC(&txBuffer[3], 2);
 
-                                for (size_t i = 0; i < 6; ++i) {
-                                    while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) { __NOP(); }
-                                    XMC_UART_CH_Transmit(XMC_UART0_CH0, txBuffer[i]);
-                                }
+                                transmitBuffer(txBuffer, 6);
 
                                 while (!XMC_USIC_CH_TXFIFO_IsEmpty(XMC_UART0_CH0)) { __NOP(); }
                                 for (volatile uint32_t i = 0; i < 200000U; ++i) { __NOP(); }
 
-                                // In-SRAM Active Application Overwrite
+                                // Execute SRAM Flasher swap
                                 execute_sram_swap(APP_START_ADDR, STAGING_START_ADDR, totalImageSize);
                             }
                             // --- OPCODE 0xFFF3: READBACK STAGING PAGE ---
                             else if (newOpcode == 0xFFF3) {
                                 isReadbackCommand = true;
                                 uint32_t offset = (static_cast<uint32_t>(rxBuffer[4]) << 24) |
-                                                  (static_cast<uint32_t>(rxBuffer[5]) << 16) |
-                                                  (static_cast<uint32_t>(rxBuffer[6]) << 8)  |
-                                                   static_cast<uint32_t>(rxBuffer[7]);
+                                                (static_cast<uint32_t>(rxBuffer[5]) << 16) |
+                                                (static_cast<uint32_t>(rxBuffer[6]) << 8)  |
+                                                static_cast<uint32_t>(rxBuffer[7]);
 
                                 uint32_t srcAddr = STAGING_START_ADDR + offset;
 
                                 memset(txBuffer, 0, sizeof(txBuffer));
-                                txBuffer[0] = 0x00;
-                                txBuffer[1] = 0x01; // Body Length: 259 Bytes (0x0103)
-                                txBuffer[2] = 0x03;
-                                txBuffer[3] = calculateCRC(txBuffer, 3);
+                                
+                                // Corrected 3-Byte UART Header for STM32 Compatibility: [LenMSB, LenLSB, HeaderCRC]
+                                txBuffer[0] = 0x01; // LenMSB (0x0103 = 259 Bytes)
+                                txBuffer[1] = 0x03; // LenLSB
+                                txBuffer[2] = calculateCRC(txBuffer, 2); // Header CRC (0x01 ^ 0x03 = 0x02)
 
-                                txBuffer[4] = transID;
-                                txBuffer[5] = 0x55; // Status OK
+                                txBuffer[3] = transID;
+                                txBuffer[4] = 0x55; // Status OK ACK
 
-                                memcpy(&txBuffer[6], reinterpret_cast<const void*>(srcAddr), 256U);
-                                txBuffer[262] = calculateCRC(&txBuffer[4], 258);
+                                memcpy(&txBuffer[5], reinterpret_cast<const void*>(srcAddr), 256U);
+                                txBuffer[261] = calculateCRC(&txBuffer[3], 258);
                             }
                             // --- LIVE CONTROL CENTER COMMANDS ---
                             else {
@@ -244,13 +320,6 @@ void UARTProtocolController::process(uint32_t currentMs,
                                     wptCtrl.saveEEPROM();
                                 }
 
-                                // 0x10: Exit auto-start countdown
-                                // Setting AutoStartDone alone is not enough — the
-                                // main loop only ticks the countdown while
-                                // (DisplayMenuID == 1 && !AutoStartDone). We must
-                                // also transition DisplayMenuID to 2 (the post-
-                                // countdown telemetry page) so the LCD leaves
-                                // the countdown screen.
                                 if (flags & 0x10) {
                                     wptCtrl.AutoStartDone = true;
                                     wptCtrl.DisplayMenuID = 2;
@@ -291,40 +360,39 @@ void UARTProtocolController::process(uint32_t currentMs,
                         // =========================================================
                         // RESPONSE TRANSMISSION
                         // =========================================================
+                        // Add a 200us guard delay so STM32 can arm UART RX before XMC transmits
+                        for (volatile uint32_t i = 0; i < 3000U; ++i) {
+                            __NOP();
+                        }
+
                         if (isStagingCommand) {
-                            // 6-byte ACK frame for Flasher
+                            // Standardized 95-byte ACK frame for STM32 TCP Bridge compatibility
                             memset(txBuffer, 0, sizeof(txBuffer));
                             txBuffer[0] = 0x00;
-                            txBuffer[1] = 0x05;
-                            txBuffer[2] = calculateCRC(txBuffer, 2);
-                            txBuffer[3] = transID;
-                            txBuffer[4] = 0x55;
-                            txBuffer[5] = calculateCRC(&txBuffer[3], 2);
+                            txBuffer[1] = BODY_RX_LEN;                 // 92 Bytes (0x5C)
+                            txBuffer[2] = calculateCRC(txBuffer, 2);   // 0x5C
 
-                            for (size_t i = 0; i < 6; ++i) {
-                                while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) { __NOP(); }
-                                XMC_UART_CH_Transmit(XMC_UART0_CH0, txBuffer[i]);
-                            }
+                            txBuffer[3] = transID;                     // Echoed Transaction ID
+                            txBuffer[4] = 0x55;                        // Status OK ACK Flag
+
+                            txBuffer[94] = calculateCRC(&txBuffer[3], 91);
+
+                            // Send full 95-byte packet so STM32 Bridge forwards it over TCP
+                            transmitBuffer(txBuffer, 95);
                         } else if (isReadbackCommand) {
                             // 263-byte Staging Readback frame
-                            for (size_t i = 0; i < 263; ++i) {
-                                while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) { __NOP(); }
-                                XMC_UART_CH_Transmit(XMC_UART0_CH0, txBuffer[i]);
-                            }
+                            transmitBuffer(txBuffer, 263);
                         } else if (isDiagLogRequest) {
                             // 95-byte Diagnostic Log frame
-                            for (size_t i = 0; i < 95; ++i) {
-                                while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) { __NOP(); }
-                                XMC_UART_CH_Transmit(XMC_UART0_CH0, txBuffer[i]);
-                            }
+                            transmitBuffer(txBuffer, 95);
                         } else {
-                            // 95-byte Real-time Telemetry frame
+                            // 95-byte Real-time Telemetry frame (3B Header + 92B Body)
                             memset(txBuffer, 0, sizeof(txBuffer));
                             txBuffer[0] = 0x00;
-                            txBuffer[1] = BODY_RX_LEN;
-                            txBuffer[2] = calculateCRC(txBuffer, 2);
+                            txBuffer[1] = BODY_RX_LEN; // 92
+                            txBuffer[2] = calculateCRC(txBuffer, 2); // 0x5C
 
-                            txBuffer[3] = transID;
+                            txBuffer[3] = transID; // Echoed transaction ID
                             txBuffer[4] = wptCtrl.PWM_EN_STATE ? 0x01 : 0x00;
 
                             txBuffer[35] = static_cast<uint8_t>((wptCtrl.WPT_OPCODE >> 8) & 0xFF);
@@ -360,8 +428,6 @@ void UARTProtocolController::process(uint32_t currentMs,
                             txBuffer[87] = static_cast<uint8_t>((pInScaled >> 8) & 0xFF);
                             txBuffer[88] = static_cast<uint8_t>(pInScaled & 0xFF);
 
-                            // Send actual measured resonant frequency (actualResonantFreq in kHz, convert to Hz)
-                            // This is the filtered/averaged measured value from frequency capture
                             uint32_t resFreqHz = static_cast<uint32_t>(wptCtrl.actualResonantFreq * 1000.0f);
                             txBuffer[89] = static_cast<uint8_t>((resFreqHz >> 24) & 0xFF);
                             txBuffer[90] = static_cast<uint8_t>((resFreqHz >> 16) & 0xFF);
@@ -372,14 +438,12 @@ void UARTProtocolController::process(uint32_t currentMs,
 
                             txBuffer[94] = calculateCRC(&txBuffer[3], 91);
 
-                            for (size_t i = 0; i < 95; ++i) {
-                                while (XMC_USIC_CH_TXFIFO_IsFull(XMC_UART0_CH0)) { __NOP(); }
-                                XMC_UART_CH_Transmit(XMC_UART0_CH0, txBuffer[i]);
-                            }
+                            transmitSplitBuffer(txBuffer, 95);
                         }
 
                         lastActivityTimer = currentMs;
                         currentState = UART_STATE::RECEIVE_LEN;
+                        stateChanged = true;
                     } else {
                         resetBus(currentMs);
                     }

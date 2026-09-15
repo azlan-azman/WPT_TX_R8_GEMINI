@@ -790,6 +790,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/UARTProtocolController.cpp.obj: C:/Users
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_usic.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/InverterPWM.hpp \
@@ -1192,11 +1193,11 @@ C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/LCDOutput.
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/UARTProtocolController.cpp:
 
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h:
+
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/UARTProtocolController.hpp:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/eeprom.cpp:
-
-C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FrequencyCapture.hpp:
 

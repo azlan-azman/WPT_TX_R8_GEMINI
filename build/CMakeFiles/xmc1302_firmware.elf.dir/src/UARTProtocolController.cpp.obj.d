@@ -23,11 +23,11 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/UARTProtocolController.cpp.obj: \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_uart.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_usic.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_common.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
- C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_device.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\CMSIS\Infineon\XMC1300_series\Include/XMC1300.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\CMSIS\Include/core_cm0.h \
@@ -72,4 +72,5 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/UARTProtocolController.cpp.obj: \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\eeprom.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_flash.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_flash.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\CMSIS\Infineon\XMC1300_series\Include/XMC1000_RomFunctionTable.h
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\CMSIS\Infineon\XMC1300_series\Include/XMC1000_RomFunctionTable.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_wdt.h
