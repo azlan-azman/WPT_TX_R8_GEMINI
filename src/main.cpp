@@ -2,15 +2,16 @@
 #include "xmc_scu.h"
 #include "xmc_wdt.h"
 #include "xmc_gpio.h"
+#include "xmc_vadc.h"
 
+#include "W5500_SPI.hpp"
+#include "SPIProtocolController.hpp"
 #include "PinDefine.h"
 #include "InverterPWM.hpp"
 #include "AnalogADC.hpp"
 #include "AnalogACMP.hpp"
 #include "HardwareERU.hpp"
 #include "FrequencyCapture.hpp"
-#include "UARTController.hpp"
-#include "UARTProtocolController.hpp"
 #include "I2CController.hpp"
 #include "I2C_LCD.h"
 #include "LCDOutput.h"
@@ -28,33 +29,22 @@ void SysTick_Handler(void)   { g_systemTicks++; }
 
 uint32_t getTickMs(void) { return g_systemTicks; }
 
-// Global Driver Instances
+W5500SPI                 w5500;
+SPIProtocolController    spiComm(&w5500);
+
 InverterPWM              inverter;
 AnalogADC                adc;
 AnalogACMP               acmp;
 HardwareERU              hardwareERU;
 FrequencyCapture         frequencyCapture;
-UARTController           uartHardware;
-UARTProtocolController   uartComm;
 I2CController            displayBus;
 PowerControl             controller;
 ButtonController         buttonController;
 
 WPT_Controller           WPT_Controller1;
-Telemetry                currentTelemetry;
+Telemetry                currentTelemetry = {};
 I2CLCD                   LCD1;
 LCDOutput                lcdOutput;
-
-// --- USIC0 RX Hardware Interrupt (IRQ 9) ---
-extern "C" {
-void IRQ9_Handler(void) {
-    while (!XMC_USIC_CH_RXFIFO_IsEmpty(XMC_UART0_CH0)) {
-        uint8_t byte = static_cast<uint8_t>(XMC_USIC_CH_RXFIFO_GetData(XMC_UART0_CH0));
-        uartComm.pushRxByte(byte);
-    }
-}
-void USIC0_0_IRQHandler(void) { IRQ9_Handler(); }
-}
 
 int main(void) {
     XMC_SCU_CLOCK_CONFIG_t clock_config = {};
@@ -75,22 +65,23 @@ int main(void) {
 
     Hardware_InitPins();
 
-    inverter.init();
+    // 1. Initialize Analog & Control Drivers BEFORE Network Startup
     adc.init();
     acmp.init();
     hardwareERU.init();
     frequencyCapture.init();
-    uartHardware.init();
     displayBus.init();
+    inverter.init();
 
-	// Initialize Fan Monitor Capture Slices (P0.12 / P0.13)
-	WPT_Controller1.fanMonitor.init();
-
+    WPT_Controller1.fanMonitor.init();
     WPT_Controller1.loadEEPROM();
+    WPT_Controller1.fault = static_cast<FaultReason>(0x00);
     inverter.setFrequency(WPT_Controller1.Resonant_Freq);
 
-    LCD1.LCDbegin(0x40);
+    // 2. Start W5500 Network Driver
+    spiComm.init();
 
+    LCD1.LCDbegin(0x40);
     WPT_Controller1.PWM_EN_STATE = false;
     WPT_Controller1.DisplayMenuID = 0;
 
@@ -103,7 +94,7 @@ int main(void) {
     while (1) {
         uint32_t now = getTickMs();
 
-        uartComm.process(now, inverter, WPT_Controller1, currentTelemetry);
+        spiComm.process(now, inverter, WPT_Controller1, currentTelemetry);
 
         if (WPT_Controller1.I2C_RST_required) {
             LCD1.reinit();
@@ -113,18 +104,22 @@ int main(void) {
         if (now - lastFastTick >= 1U) {
             lastFastTick = now;
 
+            // Trigger VADC Background Scan
+            XMC_VADC_GLOBAL_BackgroundTriggerConversion(VADC);
+
             uint16_t rawTemp = static_cast<uint16_t>(VADC_G0->RES[7]  & 0x0FFF);
             uint16_t rawIout = static_cast<uint16_t>(VADC_G0->RES[9]  & 0x0FFF);
             uint16_t rawVin  = static_cast<uint16_t>(VADC_G1->RES[11] & 0x0FFF);
             uint16_t rawVref = static_cast<uint16_t>(VADC_G1->RES[10] & 0x0FFF);
             uint16_t rawIin  = static_cast<uint16_t>(VADC_G1->RES[4]  & 0x0FFF);
 
+            // Guard against divide-by-zero if VADC isn't ready
+            if (rawVref == 0) rawVref = 2048;
+
             bool dip3 = DIP3_READ();
             currentTelemetry = adc.process(rawVin, rawIin, rawIout, rawVref, rawTemp, dip3);
 
-            // Feed pre-fault RAM trend buffer
             WPT_Controller1.pushTrend(currentTelemetry);
-
             WPT_Controller1.update(inverter, controller, currentTelemetry);
         }
 
@@ -154,7 +149,6 @@ int main(void) {
         if (now - lastCountdownTick >= 1000U) {
             lastCountdownTick = now;
 
-            // Auto-Start Countdown
             if (WPT_Controller1.DisplayMenuID == 1 && !WPT_Controller1.AutoStartDone) {
                 if (WPT_Controller1.tempSecond > 0) {
                     WPT_Controller1.tempSecond--;
@@ -167,18 +161,6 @@ int main(void) {
                     LCD1.clear();
                 }
             }
-            // System Menu Inactivity Timeout Check
-			/*else if (WPT_Controller1.In_System_Menu == 1) {
-				if (WPT_Controller1.tempSecond > 0) {
-					WPT_Controller1.tempSecond--;
-				}
-
-				// Timer expired without reaching the final page -> Discard changes
-				if (WPT_Controller1.tempSecond == 0) {
-					WPT_Controller1.discardMenuEdits(); // Revert RAM to EEPROM
-					LCD1.clear();
-				}
-			}*/
         }
 
         // 25 ms LCD Loop
@@ -188,7 +170,7 @@ int main(void) {
             lcdOutput.LcdOutput();
         }
 
-        // 500 ms Heartbeat Loop
+        // 500 ms LED Heartbeat Loop
         if (now - lastSlowTick >= 500U) {
             lastSlowTick = now;
             XMC_GPIO_ToggleOutput(LED2_PORT, LED2_PIN);

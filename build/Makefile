@@ -400,6 +400,30 @@ Libraries/XMCLib/src/xmc_i2c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.s
 .PHONY : Libraries/XMCLib/src/xmc_i2c.c.s
 
+Libraries/XMCLib/src/xmc_spi.obj: Libraries/XMCLib/src/xmc_spi.c.obj
+.PHONY : Libraries/XMCLib/src/xmc_spi.obj
+
+# target to build an object file
+Libraries/XMCLib/src/xmc_spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
+.PHONY : Libraries/XMCLib/src/xmc_spi.c.obj
+
+Libraries/XMCLib/src/xmc_spi.i: Libraries/XMCLib/src/xmc_spi.c.i
+.PHONY : Libraries/XMCLib/src/xmc_spi.i
+
+# target to preprocess a source file
+Libraries/XMCLib/src/xmc_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.i
+.PHONY : Libraries/XMCLib/src/xmc_spi.c.i
+
+Libraries/XMCLib/src/xmc_spi.s: Libraries/XMCLib/src/xmc_spi.c.s
+.PHONY : Libraries/XMCLib/src/xmc_spi.s
+
+# target to generate assembly for a file
+Libraries/XMCLib/src/xmc_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.s
+.PHONY : Libraries/XMCLib/src/xmc_spi.c.s
+
 Libraries/XMCLib/src/xmc_uart.obj: Libraries/XMCLib/src/xmc_uart.c.obj
 .PHONY : Libraries/XMCLib/src/xmc_uart.obj
 
@@ -576,6 +600,30 @@ src/LCDOutput.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/LCDOutput.cpp.s
 .PHONY : src/LCDOutput.cpp.s
 
+src/SPIProtocolController.obj: src/SPIProtocolController.cpp.obj
+.PHONY : src/SPIProtocolController.obj
+
+# target to build an object file
+src/SPIProtocolController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.obj
+.PHONY : src/SPIProtocolController.cpp.obj
+
+src/SPIProtocolController.i: src/SPIProtocolController.cpp.i
+.PHONY : src/SPIProtocolController.i
+
+# target to preprocess a source file
+src/SPIProtocolController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.i
+.PHONY : src/SPIProtocolController.cpp.i
+
+src/SPIProtocolController.s: src/SPIProtocolController.cpp.s
+.PHONY : src/SPIProtocolController.s
+
+# target to generate assembly for a file
+src/SPIProtocolController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.s
+.PHONY : src/SPIProtocolController.cpp.s
+
 src/UARTProtocolController.obj: src/UARTProtocolController.cpp.obj
 .PHONY : src/UARTProtocolController.obj
 
@@ -715,6 +763,9 @@ help:
 	@echo ... Libraries/XMCLib/src/xmc_i2c.obj
 	@echo ... Libraries/XMCLib/src/xmc_i2c.i
 	@echo ... Libraries/XMCLib/src/xmc_i2c.s
+	@echo ... Libraries/XMCLib/src/xmc_spi.obj
+	@echo ... Libraries/XMCLib/src/xmc_spi.i
+	@echo ... Libraries/XMCLib/src/xmc_spi.s
 	@echo ... Libraries/XMCLib/src/xmc_uart.obj
 	@echo ... Libraries/XMCLib/src/xmc_uart.i
 	@echo ... Libraries/XMCLib/src/xmc_uart.s
@@ -737,6 +788,9 @@ help:
 	@echo ... src/LCDOutput.obj
 	@echo ... src/LCDOutput.i
 	@echo ... src/LCDOutput.s
+	@echo ... src/SPIProtocolController.obj
+	@echo ... src/SPIProtocolController.i
+	@echo ... src/SPIProtocolController.s
 	@echo ... src/UARTProtocolController.obj
 	@echo ... src/UARTProtocolController.i
 	@echo ... src/UARTProtocolController.s

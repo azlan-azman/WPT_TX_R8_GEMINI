@@ -51,6 +51,9 @@ set(APP_SOURCES
     src/PinDefine.h
     src/eeprom.cpp
     src/eeprom.h
+    src/W5500_SPI.hpp
+    src/SPIProtocolController.cpp
+    src/SPIProtocolController.hpp
     # Bootloader helper (execute_sram_swap used by UARTProtocolController)
     src/main_bootloader.cpp
 )
@@ -83,6 +86,7 @@ set(XMCLIB_SOURCES
     Libraries/XMCLib/src/xmc_acmp.c
     Libraries/XMCLib/src/xmc1_flash.c
     Libraries/XMCLib/src/xmc_eru.c
+    Libraries/XMCLib/src/xmc_spi.c
 )
 
 # ==============================================================================

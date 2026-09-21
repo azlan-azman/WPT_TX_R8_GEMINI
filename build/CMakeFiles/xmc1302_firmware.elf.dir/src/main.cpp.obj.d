@@ -39,17 +39,25 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/main.cpp.obj: \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_gpio.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_gpio.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_gpio_map.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\PinDefine.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_common.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_vadc.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_vadc_map.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\W5500_SPI.hpp \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstdint \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstddef \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/version.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_spi.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_usic.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_usic_map.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_usic.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\SPIProtocolController.hpp \
+ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstring \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\InverterPWM.hpp \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/math.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cmath \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/requires_hosted.h \
- C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
- C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
- C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/cpp_type_traits.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/ext/type_traits.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/math.h \
@@ -57,27 +65,23 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/main.cpp.obj: \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdlib.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/stdlib.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/alloca.h \
- C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/version.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_ccu4.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_ccu4_map.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_ccu8.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_ccu8_map.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\PinDefine.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_common.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\WPTController.hpp \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\PowerControl.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\AnalogADC.hpp \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\FanMonitor.hpp \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\eeprom.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\AnalogACMP.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_acmp.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\HardwareERU.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_eru.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_eru_map.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\FrequencyCapture.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\UARTController.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_uart.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_usic.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc1_usic_map.h \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\UARTProtocolController.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\WPTController.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\PowerControl.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\FanMonitor.hpp \
- C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\eeprom.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\I2CController.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\inc/xmc_i2c.h \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\I2C_LCD.h \
