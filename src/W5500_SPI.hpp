@@ -13,7 +13,7 @@
 
 class W5500SPI {
 public:
-    static const uint16_t MAX_DATA_LEN = 260;
+    static const uint16_t MAX_DATA_LEN = 512;
 
     W5500SPI() {}
 

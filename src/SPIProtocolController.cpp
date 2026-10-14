@@ -128,8 +128,8 @@ void SPIProtocolController::pollTCPData() {
             w5500_->readBuffer(0x0028, 0x01, ptr_buf, 2);
             uint16_t rx_ptr = (ptr_buf[0] << 8) | ptr_buf[1];
 
-            uint8_t tcp_buf[280] = {0};
-            uint16_t read_len = (rx_size > 280) ? 280 : rx_size;
+            uint8_t tcp_buf[300] = {0};
+            uint16_t read_len = (rx_size > 300) ? 300 : rx_size;
 
             uint16_t offset = rx_ptr & 0x07FF;
             if ((offset + read_len) > 2048U) {
