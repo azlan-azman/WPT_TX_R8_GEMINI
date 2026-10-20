@@ -107,11 +107,12 @@ int main(void) {
             // Trigger VADC Background Scan
             XMC_VADC_GLOBAL_BackgroundTriggerConversion(VADC);
 
-            uint16_t rawTemp = static_cast<uint16_t>(VADC_G0->RES[7]  & 0x0FFF);
-            uint16_t rawIout = static_cast<uint16_t>(VADC_G0->RES[9]  & 0x0FFF);
-            uint16_t rawVin  = static_cast<uint16_t>(VADC_G1->RES[11] & 0x0FFF);
-            uint16_t rawVref = static_cast<uint16_t>(VADC_G1->RES[10] & 0x0FFF);
-            uint16_t rawIin  = static_cast<uint16_t>(VADC_G1->RES[4]  & 0x0FFF);
+            // Mapped to match DAVE Result Register configurations:
+            uint16_t rawVref = static_cast<uint16_t>(VADC_G0->RES[7]  & 0x0FFF); // ADC_VREF: G0_RES[7]
+            uint16_t rawTemp = static_cast<uint16_t>(VADC_G1->RES[4]  & 0x0FFF); // ADC_TEMP: G1_RES[4]
+            uint16_t rawIout = static_cast<uint16_t>(VADC_G1->RES[10] & 0x0FFF); // ADC_IOUT: G1_RES[10]
+            uint16_t rawVin  = static_cast<uint16_t>(VADC_G1->RES[11] & 0x0FFF); // ADC_VIN:  G1_RES[11]
+            uint16_t rawIin  = static_cast<uint16_t>(VADC_G1->RES[12] & 0x0FFF); // ADC_IIN:  G1_RES[12]
 
             // Guard against divide-by-zero if VADC isn't ready
             if (rawVref == 0) rawVref = 2048;

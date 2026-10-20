@@ -9,7 +9,7 @@
 #include "xmc_scu.h"
 
 #define CS_PORT XMC_GPIO_PORT0
-#define CS_PIN  9
+#define CS_PIN  11U
 
 class W5500SPI {
 public:
@@ -21,7 +21,7 @@ public:
         XMC_USIC_CH_Enable(XMC_SPI0_CH0);
 
         XMC_SPI_CH_CONFIG_t channel_config = {};
-        channel_config.baudrate       = 1000000U; // 8 MHz SPI clock
+        channel_config.baudrate       = 1000000U; // 1 MHz SPI clock matching DAVE
         channel_config.bus_mode       = XMC_SPI_CH_BUS_MODE_MASTER;
         channel_config.selo_inversion = XMC_SPI_CH_SLAVE_SEL_INV_TO_MSLS;
         channel_config.parity_mode    = XMC_USIC_CH_PARITY_MODE_NONE;
@@ -40,13 +40,12 @@ public:
 
         XMC_SPI_CH_SetSlaveSelectDelay(XMC_SPI0_CH0, 2U);
 
-        // MISO (P1.4)
+        // MISO -> P1.4 (Input Tristate, DX0G / Source 6)
         XMC_GPIO_CONFIG_t miso_config = {};
         miso_config.mode             = XMC_GPIO_MODE_INPUT_TRISTATE;
         miso_config.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD;
         XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 4U, &miso_config);
 
-        // Map MISO DX0 to Source 6 (DX0G on P1.4)
         XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, XMC_SPI_CH_INPUT_DIN0, 6U);
         XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, XMC_SPI_CH_INPUT_DIN1, 5U);
         XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, XMC_SPI_CH_INPUT_DIN2, 0U);
@@ -54,21 +53,21 @@ public:
 
         XMC_SPI_CH_Start(XMC_SPI0_CH0);
 
-        // MOSI (P1.5)
+        // MOSI -> P1.5 (Push-Pull, ALT2)
         XMC_GPIO_CONFIG_t mosi_config = {};
         mosi_config.mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT2;
         mosi_config.output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH;
         mosi_config.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD;
         XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 5U, &mosi_config);
 
-        // SCLK (P2.0)
+        // SCLK -> P0.8 (Push-Pull, ALT6 matching spi_master_conf.c)
         XMC_GPIO_CONFIG_t sclk_config = {};
-        sclk_config.mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT7;
+        sclk_config.mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT6;
         sclk_config.output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH;
         sclk_config.input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD;
-        XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, 0U, &sclk_config);
+        XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT0_BASE, 8U, &sclk_config);
 
-        // CS (P0.9)
+        // CS -> P0.11 (Software Controlled Push-Pull Output)
         XMC_GPIO_CONFIG_t cs_config = {};
         cs_config.mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL;
         cs_config.output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH;

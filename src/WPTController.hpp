@@ -183,7 +183,7 @@ public:
     }
 
     void loadEEPROM() {
-        uint32_t initKey = 0x17123358;
+        uint32_t initKey = 0x17123356;
         uint32_t readKey = 0;
 
         i2c_eeprom_read_long(0xA0, SETTING_1_Start_ADD, reinterpret_cast<unsigned char*>(&readKey));
@@ -417,7 +417,7 @@ public:
                     if (!continuousRunningStarted) {
                         inverter.setFrequency(Resonant_Freq);
                         inverter.setEffectiveDuty(1500.0f);
-                        powerCtrl.startRamp(1500.0f, static_cast<float>(eePWMDutyCycle), 0.500f);
+                        powerCtrl.startRamp(1500.0f, static_cast<float>(eePWMDutyCycle), 5.000f);
                         inverter.start();
                         continuousRunningStarted = true;
                     }

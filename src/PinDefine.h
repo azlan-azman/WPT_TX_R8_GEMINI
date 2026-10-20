@@ -15,17 +15,17 @@ uint32_t getTickMs(void);
 // =============================================================================
 // 1. HARDWARE INVERTER CONTROL & PWM PINS
 // =============================================================================
-#define PWM_EN_PORT             XMC_GPIO_PORT0
-#define PWM_EN_PIN              8
+#define PWM_EN_PORT             XMC_GPIO_PORT1//0
+#define PWM_EN_PIN              0//8
 
 // Leg A (CCU40 CC40 Output)
-#define PWM_LEG_A_PORT          XMC_GPIO_PORT0
-#define PWM_LEG_A_PIN           6
+#define PWM_LEG_A_PORT          XMC_GPIO_PORT1//0
+#define PWM_LEG_A_PIN           2//6
 #define PWM_LEG_A_AF            XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT4
 
 // Leg B (CCU80 CC81 Output)
 #define PWM_LEG_B_PORT          XMC_GPIO_PORT0
-#define PWM_LEG_B_PIN           7
+#define PWM_LEG_B_PIN           4//7
 #define PWM_LEG_B_AF            XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT5
 
 // =============================================================================
@@ -53,35 +53,35 @@ uint32_t getTickMs(void);
 // 4. USER INTERFACE BUTTONS & LEDS
 // =============================================================================
 #define BTN1_PORT               XMC_GPIO_PORT0
-#define BTN1_PIN                5
+#define BTN1_PIN                7//5
 #define BTN1_READ()             XMC_GPIO_GetInput(BTN1_PORT, BTN1_PIN)
 #define BTN1                    (!BTN1_READ())
 
 #define BTN2_PORT               XMC_GPIO_PORT0
-#define BTN2_PIN                4
+#define BTN2_PIN                6//4
 #define BTN2_READ()             XMC_GPIO_GetInput(BTN2_PORT, BTN2_PIN)
 #define BTN2                    (!BTN2_READ())
 
 #define BTN3_PORT               XMC_GPIO_PORT0
-#define BTN3_PIN                3
+#define BTN3_PIN                5//3
 #define BTN3_READ()             XMC_GPIO_GetInput(BTN3_PORT, BTN3_PIN)
 #define BTN3                    (!BTN3_READ())
 
 #define LED0_PORT               XMC_GPIO_PORT1
 #define LED0_PIN                1
 
-#define LED1_PORT               XMC_GPIO_PORT1
-#define LED1_PIN                2
+#define LED1_PORT               XMC_GPIO_PORT0//1
+#define LED1_PIN                3//2
 
 #define LED2_PORT               XMC_GPIO_PORT1
 #define LED2_PIN                3
 
 #define DIP3_PORT               XMC_GPIO_PORT0
-#define DIP3_PIN                1
+#define DIP3_PIN                2//1
 #define DIP3_READ()             XMC_GPIO_GetInput(DIP3_PORT, DIP3_PIN)
 
 #define DIP2_PORT               XMC_GPIO_PORT0
-#define DIP2_PIN                0
+#define DIP2_PIN                1//0
 #define DIP2_READ()             XMC_GPIO_GetInput(DIP2_PORT, DIP2_PIN)
 
 // =============================================================================
