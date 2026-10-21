@@ -18,6 +18,11 @@ add_link_options("-T${LINKER_SCRIPT}")
 # ==============================================================================
 include_directories(
     src
+    src/ADC_MEASUREMENT
+    src/ADC_MEASUREMENT_ADV
+    src/ANALOG_IO
+    src/CLOCK_XMC1
+    src/GLOBAL_ADC
     Startup
     Libraries
     Libraries/CMSIS/Include
@@ -56,6 +61,31 @@ set(APP_SOURCES
     src/SPIProtocolController.hpp
     # Bootloader helper (execute_sram_swap used by UARTProtocolController)
     src/main_bootloader.cpp
+    src/ADCData.h
+    src/ADCData.cpp
+    src/DAVE.h
+    src/DAVE.c
+    src/DAVE_Common.h
+    src/ADC_MEASUREMENT/adc_measurement.c
+    src/ADC_MEASUREMENT/adc_measurement_conf.c
+    src/ADC_MEASUREMENT/adc_measurement_conf.h
+    src/ADC_MEASUREMENT/adc_measurement_extern.h
+    src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c
+    src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c
+    src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h
+    src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h
+    src/ANALOG_IO/analog_io.c
+    src/ANALOG_IO/analog_io.h
+    src/ANALOG_IO/analog_io_conf.c
+    src/ANALOG_IO/analog_io_conf.h
+    src/CLOCK_XMC1/clock_xmc1.c
+    src/CLOCK_XMC1/clock_xmc1.h
+    src/CLOCK_XMC1/clock_xmc1_conf.c
+    src/CLOCK_XMC1/clock_xmc1_conf.h
+    src/GLOBAL_ADC/global_adc.c
+    src/GLOBAL_ADC/global_adc.h
+    src/GLOBAL_ADC/global_adc_conf.c
+    src/GLOBAL_ADC/global_adc_conf.h
 )
 
 # ==============================================================================

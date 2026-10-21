@@ -5,11 +5,12 @@
 #include "PinDefine.h"
 #include <stdio.h>
 #include <string.h>
+#include "ADCData.h"
 
 #define FIRMWARE_VERSION ("GEMINI")
 
 extern WPT_Controller WPT_Controller1;
-extern Telemetry      currentTelemetry;
+extern Telemetry1      currentTelemetry;
 extern I2CLCD         LCD1;
 
 static char PreviousRows[4][21] = { {0}, {0}, {0}, {0} };

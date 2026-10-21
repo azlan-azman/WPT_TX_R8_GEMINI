@@ -42,7 +42,7 @@ public:
     void process(uint32_t currentMs,
                  InverterPWM &inverter,
                  WPT_Controller &wptCtrl,
-                 const Telemetry &telemetry);
+                 const Telemetry1 &telemetry);
 
     // XOR-based CRC calculation matching UART_OLI::getset_crc
     static uint8_t calculateCRC(const uint8_t *pData, size_t len) {

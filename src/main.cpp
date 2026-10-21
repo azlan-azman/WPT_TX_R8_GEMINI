@@ -18,6 +18,8 @@
 #include "PowerControl.hpp"
 #include "WPTController.hpp"
 #include "ButtonController.h"
+#include <DAVE.h>
+#include "ADCData.h"
 
 static volatile uint32_t g_systemTicks = 0;
 
@@ -42,9 +44,11 @@ PowerControl             controller;
 ButtonController         buttonController;
 
 WPT_Controller           WPT_Controller1;
-Telemetry                currentTelemetry = {};
+Telemetry1               currentTelemetry = {};
 I2CLCD                   LCD1;
 LCDOutput                lcdOutput;
+
+ADCData                   ADCData1;
 
 int main(void) {
     XMC_SCU_CLOCK_CONFIG_t clock_config = {};
@@ -65,8 +69,16 @@ int main(void) {
 
     Hardware_InitPins();
 
-    // 1. Initialize Analog & Control Drivers BEFORE Network Startup
-    adc.init();
+    XMC_Delay(10);
+	DAVE_STATUS_t status;
+	status = DAVE_Init(); /* Initialization of DAVE APPs  */
+	XMC_Delay(10);
+
+    // 1. Initialize Analog & Inverter Drivers Before Starting Network
+    //adc.init();
+    ADC_MEASUREMENT_StartConversion(&ADC_MEASUREMENT_0);
+	ADC_MEASUREMENT_ADV_StartADC(&ADC_MEASUREMENT_ADV_0);
+	XMC_Delay(10);
     acmp.init();
     hardwareERU.init();
     frequencyCapture.init();
@@ -78,7 +90,7 @@ int main(void) {
     WPT_Controller1.fault = static_cast<FaultReason>(0x00);
     inverter.setFrequency(WPT_Controller1.Resonant_Freq);
 
-    // 2. Start W5500 Network Driver
+    // 2. Start W5500 Network Controller
     spiComm.init();
 
     LCD1.LCDbegin(0x40);
@@ -94,37 +106,26 @@ int main(void) {
     while (1) {
         uint32_t now = getTickMs();
 
+        // Continuous ADC Read & Filter (Runs every loop iteration, matching DAVE's ADCData)
+        bool dip3 = DIP3_READ();
+        currentTelemetry = ADCData1.readAndProcess1(dip3);
+
+        // Network communication
         spiComm.process(now, inverter, WPT_Controller1, currentTelemetry);
 
         if (WPT_Controller1.I2C_RST_required) {
             LCD1.reinit();
         }
 
-        // 1 ms Control Loop
+        // 1 ms Periodic Control & Power Ramp Loop (Requires constant dt = 1ms)
         if (now - lastFastTick >= 1U) {
             lastFastTick = now;
-
-            // Trigger VADC Background Scan
-            XMC_VADC_GLOBAL_BackgroundTriggerConversion(VADC);
-
-            // Mapped to match DAVE Result Register configurations:
-            uint16_t rawVref = static_cast<uint16_t>(VADC_G0->RES[7]  & 0x0FFF); // ADC_VREF: G0_RES[7]
-            uint16_t rawTemp = static_cast<uint16_t>(VADC_G1->RES[4]  & 0x0FFF); // ADC_TEMP: G1_RES[4]
-            uint16_t rawIout = static_cast<uint16_t>(VADC_G1->RES[10] & 0x0FFF); // ADC_IOUT: G1_RES[10]
-            uint16_t rawVin  = static_cast<uint16_t>(VADC_G1->RES[11] & 0x0FFF); // ADC_VIN:  G1_RES[11]
-            uint16_t rawIin  = static_cast<uint16_t>(VADC_G1->RES[12] & 0x0FFF); // ADC_IIN:  G1_RES[12]
-
-            // Guard against divide-by-zero if VADC isn't ready
-            if (rawVref == 0) rawVref = 2048;
-
-            bool dip3 = DIP3_READ();
-            currentTelemetry = adc.process(rawVin, rawIin, rawIout, rawVref, rawTemp, dip3);
 
             WPT_Controller1.pushTrend(currentTelemetry);
             WPT_Controller1.update(inverter, controller, currentTelemetry);
         }
 
-        // 10 ms Button Loop
+        // 10 ms Button Polling Loop
         if (now - lastButtonTick >= 10U) {
             lastButtonTick = now;
             WPT_Controller1.DIP3_State = DIP3_READ();
@@ -146,7 +147,7 @@ int main(void) {
             buttonController.ButtonPress();
         }
 
-        // 1000 ms Countdown Loop
+        // 1000 ms Inactivity Countdown Loop
         if (now - lastCountdownTick >= 1000U) {
             lastCountdownTick = now;
 
@@ -164,7 +165,7 @@ int main(void) {
             }
         }
 
-        // 25 ms LCD Loop
+        // 25 ms LCD Display Loop
         if (now - lastLcdTick >= 25U) {
             lastLcdTick = now;
             WPT_Controller1.rowToUpdate = (WPT_Controller1.rowToUpdate + 1) % 4;

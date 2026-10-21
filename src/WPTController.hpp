@@ -8,6 +8,7 @@
 #include "AnalogADC.hpp"
 #include "FanMonitor.hpp"
 #include "eeprom.h"
+#include "ADCData.h"
 
 extern uint32_t getTickMs(void);
 
@@ -136,14 +137,14 @@ public:
             memset(ramTrendBuffer, 0, sizeof(ramTrendBuffer));
           }
 
-    void pushTrend(const Telemetry &telemetry) {
+    void pushTrend(const Telemetry1 &telemetry) {
         ramTrendBuffer[trendHead].vIn  = static_cast<int16_t>(telemetry.vIn * 100.0f);
         ramTrendBuffer[trendHead].iIn  = static_cast<int16_t>(telemetry.iIn * 100.0f);
         ramTrendBuffer[trendHead].iOut = static_cast<int16_t>(telemetry.iOut * 100.0f);
         trendHead = (trendHead + 1) % 4;
     }
 
-    void writeFaultLog(uint8_t eventType, uint8_t reasonCode, const Telemetry &telemetry) {
+    void writeFaultLog(uint8_t eventType, uint8_t reasonCode, const Telemetry1 &telemetry) {
         uint16_t logIndex = 0;
         i2c_eeprom_read_long(0xA0, 0x0100, reinterpret_cast<unsigned char*>(&logIndex));
 
@@ -260,7 +261,7 @@ public:
 		}
 	}
 
-    void triggerFault(InverterPWM& inverter, PowerControl& powerCtrl, FaultReason reason, const Telemetry& telemetry) {
+    void triggerFault(InverterPWM& inverter, PowerControl& powerCtrl, FaultReason reason, const Telemetry1& telemetry) {
         inverter.stop();
         powerCtrl.reset();
         PWM_EN_STATE = false;
@@ -321,7 +322,7 @@ public:
         }
     }
 
-    void processClosedLoop(InverterPWM& inverter, const Telemetry& telemetry) {
+    void processClosedLoop(InverterPWM& inverter, const Telemetry1& telemetry) {
         if (!PWM_EN_STATE || ControlMode == 0) {
             integralError = 0.0f;
             return;
@@ -354,8 +355,8 @@ public:
         }
     }
 
-    void update(InverterPWM& inverter, PowerControl& powerCtrl, const Telemetry& telemetry) {
-        Telemetry localTelemetry = telemetry;
+    void update(InverterPWM& inverter, PowerControl& powerCtrl, const Telemetry1& telemetry) {
+        Telemetry1 localTelemetry = telemetry;
         //localTelemetry.vIn   = 24.0f;
         //localTelemetry.iIn   = 0.0f;
         //localTelemetry.tempC = 25.0f;

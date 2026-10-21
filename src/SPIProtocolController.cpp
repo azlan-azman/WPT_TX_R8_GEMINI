@@ -162,7 +162,7 @@ void SPIProtocolController::pollTCPData() {
 void SPIProtocolController::process(uint32_t currentMs,
                                      InverterPWM &inverter,
                                      WPT_Controller &wptCtrl,
-                                     const Telemetry &telemetry) {
+                                     const Telemetry1 &telemetry) {
     static uint32_t lastPollMs = 0;
     if (currentMs - lastPollMs >= 2U) {
         lastPollMs = currentMs;

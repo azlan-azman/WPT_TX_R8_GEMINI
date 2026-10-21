@@ -183,9 +183,177 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/main_bootloader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/main_bootloader.cpp.s"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\main_bootloader.cpp -o CMakeFiles\xmc1302_firmware.elf.dir\src\main_bootloader.cpp.s
 
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.cpp
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ADCData.cpp.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADCData.cpp.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADCData.cpp
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADCData.cpp > CMakeFiles\xmc1302_firmware.elf.dir\src\ADCData.cpp.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADCData.cpp -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADCData.cpp.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\DAVE.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\DAVE.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\DAVE.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\DAVE.c > CMakeFiles\xmc1302_firmware.elf.dir\src\DAVE.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\DAVE.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\DAVE.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement_conf.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement_conf.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement_conf.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement_conf.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement_conf.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT\adc_measurement_conf.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT\adc_measurement_conf.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ADC_MEASUREMENT_ADV\adc_measurement_adv_conf.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io_conf.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io_conf.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io_conf.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io_conf.c > CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io_conf.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ANALOG_IO\analog_io_conf.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\ANALOG_IO\analog_io_conf.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1.c > CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1_conf.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1_conf.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1_conf.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1_conf.c > CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1_conf.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\CLOCK_XMC1\clock_xmc1_conf.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\CLOCK_XMC1\clock_xmc1_conf.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc.c > CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc.c.s
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.c
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc_conf.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc_conf.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc_conf.c
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.i"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc_conf.c > CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc_conf.c.i
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.s"
+	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\GLOBAL_ADC\global_adc_conf.c -o CMakeFiles\xmc1302_firmware.elf.dir\src\GLOBAL_ADC\global_adc_conf.c.s
+
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Startup/startup_XMC1300.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building ASM object CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building ASM object CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\xmc1302_firmware.elf.dir\Startup\startup_XMC1300.S.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Startup\startup_XMC1300.S
 
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.i: cmake_force
@@ -199,7 +367,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.s: cmake_force
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Startup/system_XMC1300.c
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Startup\system_XMC1300.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Startup\system_XMC1300.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Startup\system_XMC1300.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.i: cmake_force
@@ -213,7 +381,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.s: cmake_force
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_common.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_common.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_common.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_common.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.i: cmake_force
@@ -226,7 +394,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.s: cmake_f
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building ASM object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\TOOLCHAIN_GCC_ARM\xmc_common_gcc.S.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\TOOLCHAIN_GCC_ARM\xmc_common_gcc.S
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_common_gcc.S.i: cmake_force
@@ -240,7 +408,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/TOOLCHAIN_GCC_ARM/xmc_c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc1_scu.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_scu.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_scu.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc1_scu.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.i: cmake_force
@@ -254,7 +422,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_scu.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc1_gpio.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_gpio.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_gpio.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc1_gpio.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.i: cmake_force
@@ -268,7 +436,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_gpio.c.s: cmake_fo
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_gpio.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_gpio.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_gpio.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_gpio.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.i: cmake_force
@@ -282,7 +450,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_gpio.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_ccu4.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_ccu4.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_ccu4.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_ccu4.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.i: cmake_force
@@ -296,7 +464,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu4.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_ccu8.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_ccu8.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_ccu8.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_ccu8.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.i: cmake_force
@@ -310,7 +478,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_ccu8.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc1_eru.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_eru.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_eru.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc1_eru.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.i: cmake_force
@@ -324,7 +492,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_eru.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_usic.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_usic.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_usic.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_usic.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.i: cmake_force
@@ -338,7 +506,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_usic.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_uart.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_uart.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_uart.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_uart.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.i: cmake_force
@@ -352,7 +520,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_uart.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_i2c.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_i2c.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_i2c.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_i2c.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.i: cmake_force
@@ -366,7 +534,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_i2c.c.s: cmake_forc
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_vadc.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_vadc.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_vadc.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_vadc.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.i: cmake_force
@@ -380,7 +548,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_vadc.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_acmp.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_acmp.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_acmp.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_acmp.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.i: cmake_force
@@ -394,7 +562,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_acmp.c.s: cmake_for
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc1_flash.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_flash.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc1_flash.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc1_flash.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.i: cmake_force
@@ -408,7 +576,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc1_flash.c.s: cmake_f
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_eru.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_eru.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_eru.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_eru.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.i: cmake_force
@@ -422,7 +590,7 @@ CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_eru.c.s: cmake_forc
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/flags.make
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_spi.c
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj: CMakeFiles/xmc1302_firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj"
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj -MF CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_spi.c.obj.d -o CMakeFiles\xmc1302_firmware.elf.dir\Libraries\XMCLib\src\xmc_spi.c.obj -c C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\Libraries\XMCLib\src\xmc_spi.c
 
 CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.i: cmake_force
@@ -443,6 +611,18 @@ xmc1302_firmware_elf_OBJECTS = \
 "CMakeFiles/xmc1302_firmware.elf.dir/src/eeprom.cpp.obj" \
 "CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.obj" \
 "CMakeFiles/xmc1302_firmware.elf.dir/src/main_bootloader.cpp.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj" \
+"CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj" \
 "CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj" \
 "CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj" \
 "CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj" \
@@ -473,6 +653,18 @@ xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ButtonController.c
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/eeprom.cpp.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/main_bootloader.cpp.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj
+xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/Startup/startup_XMC1300.S.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_common.c.obj
@@ -493,7 +685,7 @@ xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/x
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/Libraries/XMCLib/src/xmc_spi.c.obj
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/build.make
 xmc1302_firmware.elf: CMakeFiles/xmc1302_firmware.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable xmc1302_firmware.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable xmc1302_firmware.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\xmc1302_firmware.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Generating auxiliary binary formats and showing size info..."
 	"C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin\arm-none-eabi-objcopy.exe" -O ihex xmc1302_firmware.elf xmc1302_firmware.hex

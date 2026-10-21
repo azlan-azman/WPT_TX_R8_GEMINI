@@ -7,6 +7,7 @@
 #include "W5500_SPI.hpp"
 #include "InverterPWM.hpp"
 #include "WPTController.hpp"
+#include "ADCData.h"
 
 #define STD_REQ_LEN         10U   // [Func, MsgID, PWM, Opcode(2), Freq/Offset(4), Flags]
 #define OTA_WRITE_REQ_LEN   266U  // 10B Header + 256B Flash Page Data
@@ -22,7 +23,7 @@ public:
     void process(uint32_t currentMs,
                  InverterPWM &inverter,
                  WPT_Controller &wptCtrl,
-                 const Telemetry &telemetry);
+                 const Telemetry1 &telemetry);
 
 private:
     W5500SPI* w5500_;

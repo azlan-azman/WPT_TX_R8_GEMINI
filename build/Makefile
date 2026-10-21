@@ -528,6 +528,174 @@ Startup/system_XMC1300.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.s
 .PHONY : Startup/system_XMC1300.c.s
 
+src/ADCData.obj: src/ADCData.cpp.obj
+.PHONY : src/ADCData.obj
+
+# target to build an object file
+src/ADCData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj
+.PHONY : src/ADCData.cpp.obj
+
+src/ADCData.i: src/ADCData.cpp.i
+.PHONY : src/ADCData.i
+
+# target to preprocess a source file
+src/ADCData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.i
+.PHONY : src/ADCData.cpp.i
+
+src/ADCData.s: src/ADCData.cpp.s
+.PHONY : src/ADCData.s
+
+# target to generate assembly for a file
+src/ADCData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.s
+.PHONY : src/ADCData.cpp.s
+
+src/ADC_MEASUREMENT/adc_measurement.obj: src/ADC_MEASUREMENT/adc_measurement.c.obj
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.obj
+
+# target to build an object file
+src/ADC_MEASUREMENT/adc_measurement.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.c.obj
+
+src/ADC_MEASUREMENT/adc_measurement.i: src/ADC_MEASUREMENT/adc_measurement.c.i
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.i
+
+# target to preprocess a source file
+src/ADC_MEASUREMENT/adc_measurement.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.i
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.c.i
+
+src/ADC_MEASUREMENT/adc_measurement.s: src/ADC_MEASUREMENT/adc_measurement.c.s
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.s
+
+# target to generate assembly for a file
+src/ADC_MEASUREMENT/adc_measurement.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.s
+.PHONY : src/ADC_MEASUREMENT/adc_measurement.c.s
+
+src/ADC_MEASUREMENT/adc_measurement_conf.obj: src/ADC_MEASUREMENT/adc_measurement_conf.c.obj
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.obj
+
+# target to build an object file
+src/ADC_MEASUREMENT/adc_measurement_conf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.c.obj
+
+src/ADC_MEASUREMENT/adc_measurement_conf.i: src/ADC_MEASUREMENT/adc_measurement_conf.c.i
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.i
+
+# target to preprocess a source file
+src/ADC_MEASUREMENT/adc_measurement_conf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.i
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.c.i
+
+src/ADC_MEASUREMENT/adc_measurement_conf.s: src/ADC_MEASUREMENT/adc_measurement_conf.c.s
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.s
+
+# target to generate assembly for a file
+src/ADC_MEASUREMENT/adc_measurement_conf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.s
+.PHONY : src/ADC_MEASUREMENT/adc_measurement_conf.c.s
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.obj: src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.obj
+
+# target to build an object file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.i: src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.i
+
+# target to preprocess a source file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.i
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.s: src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.s
+
+# target to generate assembly for a file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.s
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.obj: src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.obj
+
+# target to build an object file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.i: src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.i
+
+# target to preprocess a source file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.i
+
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.s: src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.s
+
+# target to generate assembly for a file
+src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s
+.PHONY : src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.s
+
+src/ANALOG_IO/analog_io.obj: src/ANALOG_IO/analog_io.c.obj
+.PHONY : src/ANALOG_IO/analog_io.obj
+
+# target to build an object file
+src/ANALOG_IO/analog_io.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj
+.PHONY : src/ANALOG_IO/analog_io.c.obj
+
+src/ANALOG_IO/analog_io.i: src/ANALOG_IO/analog_io.c.i
+.PHONY : src/ANALOG_IO/analog_io.i
+
+# target to preprocess a source file
+src/ANALOG_IO/analog_io.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.i
+.PHONY : src/ANALOG_IO/analog_io.c.i
+
+src/ANALOG_IO/analog_io.s: src/ANALOG_IO/analog_io.c.s
+.PHONY : src/ANALOG_IO/analog_io.s
+
+# target to generate assembly for a file
+src/ANALOG_IO/analog_io.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.s
+.PHONY : src/ANALOG_IO/analog_io.c.s
+
+src/ANALOG_IO/analog_io_conf.obj: src/ANALOG_IO/analog_io_conf.c.obj
+.PHONY : src/ANALOG_IO/analog_io_conf.obj
+
+# target to build an object file
+src/ANALOG_IO/analog_io_conf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj
+.PHONY : src/ANALOG_IO/analog_io_conf.c.obj
+
+src/ANALOG_IO/analog_io_conf.i: src/ANALOG_IO/analog_io_conf.c.i
+.PHONY : src/ANALOG_IO/analog_io_conf.i
+
+# target to preprocess a source file
+src/ANALOG_IO/analog_io_conf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.i
+.PHONY : src/ANALOG_IO/analog_io_conf.c.i
+
+src/ANALOG_IO/analog_io_conf.s: src/ANALOG_IO/analog_io_conf.c.s
+.PHONY : src/ANALOG_IO/analog_io_conf.s
+
+# target to generate assembly for a file
+src/ANALOG_IO/analog_io_conf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.s
+.PHONY : src/ANALOG_IO/analog_io_conf.c.s
+
 src/ButtonController.obj: src/ButtonController.cpp.obj
 .PHONY : src/ButtonController.obj
 
@@ -551,6 +719,126 @@ src/ButtonController.s: src/ButtonController.cpp.s
 src/ButtonController.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/ButtonController.cpp.s
 .PHONY : src/ButtonController.cpp.s
+
+src/CLOCK_XMC1/clock_xmc1.obj: src/CLOCK_XMC1/clock_xmc1.c.obj
+.PHONY : src/CLOCK_XMC1/clock_xmc1.obj
+
+# target to build an object file
+src/CLOCK_XMC1/clock_xmc1.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj
+.PHONY : src/CLOCK_XMC1/clock_xmc1.c.obj
+
+src/CLOCK_XMC1/clock_xmc1.i: src/CLOCK_XMC1/clock_xmc1.c.i
+.PHONY : src/CLOCK_XMC1/clock_xmc1.i
+
+# target to preprocess a source file
+src/CLOCK_XMC1/clock_xmc1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.i
+.PHONY : src/CLOCK_XMC1/clock_xmc1.c.i
+
+src/CLOCK_XMC1/clock_xmc1.s: src/CLOCK_XMC1/clock_xmc1.c.s
+.PHONY : src/CLOCK_XMC1/clock_xmc1.s
+
+# target to generate assembly for a file
+src/CLOCK_XMC1/clock_xmc1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.s
+.PHONY : src/CLOCK_XMC1/clock_xmc1.c.s
+
+src/CLOCK_XMC1/clock_xmc1_conf.obj: src/CLOCK_XMC1/clock_xmc1_conf.c.obj
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.obj
+
+# target to build an object file
+src/CLOCK_XMC1/clock_xmc1_conf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.c.obj
+
+src/CLOCK_XMC1/clock_xmc1_conf.i: src/CLOCK_XMC1/clock_xmc1_conf.c.i
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.i
+
+# target to preprocess a source file
+src/CLOCK_XMC1/clock_xmc1_conf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.i
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.c.i
+
+src/CLOCK_XMC1/clock_xmc1_conf.s: src/CLOCK_XMC1/clock_xmc1_conf.c.s
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.s
+
+# target to generate assembly for a file
+src/CLOCK_XMC1/clock_xmc1_conf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.s
+.PHONY : src/CLOCK_XMC1/clock_xmc1_conf.c.s
+
+src/DAVE.obj: src/DAVE.c.obj
+.PHONY : src/DAVE.obj
+
+# target to build an object file
+src/DAVE.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj
+.PHONY : src/DAVE.c.obj
+
+src/DAVE.i: src/DAVE.c.i
+.PHONY : src/DAVE.i
+
+# target to preprocess a source file
+src/DAVE.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.i
+.PHONY : src/DAVE.c.i
+
+src/DAVE.s: src/DAVE.c.s
+.PHONY : src/DAVE.s
+
+# target to generate assembly for a file
+src/DAVE.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.s
+.PHONY : src/DAVE.c.s
+
+src/GLOBAL_ADC/global_adc.obj: src/GLOBAL_ADC/global_adc.c.obj
+.PHONY : src/GLOBAL_ADC/global_adc.obj
+
+# target to build an object file
+src/GLOBAL_ADC/global_adc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj
+.PHONY : src/GLOBAL_ADC/global_adc.c.obj
+
+src/GLOBAL_ADC/global_adc.i: src/GLOBAL_ADC/global_adc.c.i
+.PHONY : src/GLOBAL_ADC/global_adc.i
+
+# target to preprocess a source file
+src/GLOBAL_ADC/global_adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.i
+.PHONY : src/GLOBAL_ADC/global_adc.c.i
+
+src/GLOBAL_ADC/global_adc.s: src/GLOBAL_ADC/global_adc.c.s
+.PHONY : src/GLOBAL_ADC/global_adc.s
+
+# target to generate assembly for a file
+src/GLOBAL_ADC/global_adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.s
+.PHONY : src/GLOBAL_ADC/global_adc.c.s
+
+src/GLOBAL_ADC/global_adc_conf.obj: src/GLOBAL_ADC/global_adc_conf.c.obj
+.PHONY : src/GLOBAL_ADC/global_adc_conf.obj
+
+# target to build an object file
+src/GLOBAL_ADC/global_adc_conf.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj
+.PHONY : src/GLOBAL_ADC/global_adc_conf.c.obj
+
+src/GLOBAL_ADC/global_adc_conf.i: src/GLOBAL_ADC/global_adc_conf.c.i
+.PHONY : src/GLOBAL_ADC/global_adc_conf.i
+
+# target to preprocess a source file
+src/GLOBAL_ADC/global_adc_conf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.i
+.PHONY : src/GLOBAL_ADC/global_adc_conf.c.i
+
+src/GLOBAL_ADC/global_adc_conf.s: src/GLOBAL_ADC/global_adc_conf.c.s
+.PHONY : src/GLOBAL_ADC/global_adc_conf.s
+
+# target to generate assembly for a file
+src/GLOBAL_ADC/global_adc_conf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\xmc1302_firmware.elf.dir\build.make CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.s
+.PHONY : src/GLOBAL_ADC/global_adc_conf.c.s
 
 src/I2C_LCD.obj: src/I2C_LCD.cpp.obj
 .PHONY : src/I2C_LCD.obj
@@ -779,9 +1067,45 @@ help:
 	@echo ... Startup/system_XMC1300.obj
 	@echo ... Startup/system_XMC1300.i
 	@echo ... Startup/system_XMC1300.s
+	@echo ... src/ADCData.obj
+	@echo ... src/ADCData.i
+	@echo ... src/ADCData.s
+	@echo ... src/ADC_MEASUREMENT/adc_measurement.obj
+	@echo ... src/ADC_MEASUREMENT/adc_measurement.i
+	@echo ... src/ADC_MEASUREMENT/adc_measurement.s
+	@echo ... src/ADC_MEASUREMENT/adc_measurement_conf.obj
+	@echo ... src/ADC_MEASUREMENT/adc_measurement_conf.i
+	@echo ... src/ADC_MEASUREMENT/adc_measurement_conf.s
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv.obj
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv.i
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv.s
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.obj
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.i
+	@echo ... src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.s
+	@echo ... src/ANALOG_IO/analog_io.obj
+	@echo ... src/ANALOG_IO/analog_io.i
+	@echo ... src/ANALOG_IO/analog_io.s
+	@echo ... src/ANALOG_IO/analog_io_conf.obj
+	@echo ... src/ANALOG_IO/analog_io_conf.i
+	@echo ... src/ANALOG_IO/analog_io_conf.s
 	@echo ... src/ButtonController.obj
 	@echo ... src/ButtonController.i
 	@echo ... src/ButtonController.s
+	@echo ... src/CLOCK_XMC1/clock_xmc1.obj
+	@echo ... src/CLOCK_XMC1/clock_xmc1.i
+	@echo ... src/CLOCK_XMC1/clock_xmc1.s
+	@echo ... src/CLOCK_XMC1/clock_xmc1_conf.obj
+	@echo ... src/CLOCK_XMC1/clock_xmc1_conf.i
+	@echo ... src/CLOCK_XMC1/clock_xmc1_conf.s
+	@echo ... src/DAVE.obj
+	@echo ... src/DAVE.i
+	@echo ... src/DAVE.s
+	@echo ... src/GLOBAL_ADC/global_adc.obj
+	@echo ... src/GLOBAL_ADC/global_adc.i
+	@echo ... src/GLOBAL_ADC/global_adc.s
+	@echo ... src/GLOBAL_ADC/global_adc_conf.obj
+	@echo ... src/GLOBAL_ADC/global_adc_conf.i
+	@echo ... src/GLOBAL_ADC/global_adc_conf.s
 	@echo ... src/I2C_LCD.obj
 	@echo ... src/I2C_LCD.i
 	@echo ... src/I2C_LCD.s

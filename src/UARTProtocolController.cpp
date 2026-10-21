@@ -1,7 +1,9 @@
 #include "UARTProtocolController.hpp"
+#include "ADCData.h"
 #include "xmc_flash.h"
 #include "xmc_wdt.h" // Service Watchdog Timer
 #include "eeprom.h"
+#include "ADCData.h"
 
 #define STAGING_START_ADDR 0x1001B000U
 #define APP_START_ADDR     0x10001000U
@@ -88,7 +90,7 @@ void UARTProtocolController::transmitSplitBuffer(const uint8_t *buffer, size_t t
 void UARTProtocolController::process(uint32_t currentMs,
                                      InverterPWM &inverter,
                                      WPT_Controller &wptCtrl,
-                                     const Telemetry &telemetry) {
+                                     const Telemetry1 &telemetry) {
     // Clear USIC UART line noise or stop bit errors
     uint32_t status = XMC_UART_CH_GetStatusFlag(XMC_UART0_CH0);
     if (status & (XMC_UART_CH_STATUS_FLAG_RECEIVER_NOISE_DETECTED |

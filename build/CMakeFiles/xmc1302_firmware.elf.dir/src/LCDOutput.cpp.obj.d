@@ -68,6 +68,27 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/LCDOutput.cpp.obj: \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\AnalogADC.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\FanMonitor.hpp \
  C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\eeprom.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src\ADCData.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/DAVE.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/CLOCK_XMC1/clock_xmc1.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/DAVE_Common.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/CLOCK_XMC1/clock_xmc1_conf.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/CLOCK_XMC1/clock_xmc1_extern.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/CLOCK_XMC1/clock_xmc1.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ANALOG_IO/analog_io.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ANALOG_IO/analog_io_conf.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ANALOG_IO/analog_io_extern.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/GLOBAL_ADC/global_adc.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/GLOBAL_ADC/global_adc_conf.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/GLOBAL_ADC/global_adc_extern.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/GLOBAL_ADC/global_adc.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ANALOG_IO/analog_io.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT/adc_measurement.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT/adc_measurement_conf.h \
+ C:\Users\azlan.azman\Desktop\tx_r8_gemini_github\WPT_TX_R8_GEMINI\src/ADC_MEASUREMENT/adc_measurement_extern.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdio.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdarg.h \
  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/stdio.h

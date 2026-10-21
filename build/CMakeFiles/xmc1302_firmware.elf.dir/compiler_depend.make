@@ -559,6 +559,358 @@ CMakeFiles/xmc1302_firmware.elf.dir/Startup/system_XMC1300.c.obj: C:/Users/azlan
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h
 
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADCData.cpp.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.cpp \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/alloca.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/cpp_type_traits.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/requires_hosted.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/bits/version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cmath \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/ext/type_traits.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/math.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/stdlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/math.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT/adc_measurement_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/ANALOG_IO/analog_io_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h
+
 CMakeFiles/xmc1302_firmware.elf.dir/src/ButtonController.cpp.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.cpp \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
@@ -616,6 +968,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/ButtonController.cpp.obj: C:/Users/azlan
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
@@ -625,6 +995,225 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/ButtonController.cpp.obj: C:/Users/azlan
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/PowerControl.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/WPTController.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/eeprom.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/CLOCK_XMC1/clock_xmc1_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/DAVE.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_gpio_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_gpio.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h
+
+CMakeFiles/xmc1302_firmware.elf.dir/src/GLOBAL_ADC/global_adc_conf.c.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/inttypes.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/machine/ieeefp.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/newlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/strings.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/cdefs.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/config.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/lock.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/reent.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/string.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_compiler.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_gcc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/cmsis_version.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Infineon/XMC1300_series/Include/system_XMC1300.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc1_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_device.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h
 
 CMakeFiles/xmc1302_firmware.elf.dir/src/I2C_LCD.cpp.obj: C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/I2C_LCD.cpp \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/_ansi.h \
@@ -686,6 +1275,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/I2C_LCD.cpp.obj: C:/Users/azlan.azman/De
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_usic.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/I2C_LCD.h \
@@ -755,6 +1362,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/LCDOutput.cpp.obj: C:/Users/azlan.azman/
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_scu.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/I2C_LCD.h \
@@ -832,6 +1457,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/SPIProtocolController.cpp.obj: C:/Users/
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/InverterPWM.hpp \
@@ -906,6 +1549,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/UARTProtocolController.cpp.obj: C:/Users
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/InverterPWM.hpp \
@@ -975,6 +1636,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/eeprom.cpp.obj: C:/Users/azlan.azman/Des
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_usic.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/FanMonitor.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/InverterPWM.hpp \
@@ -1051,6 +1730,24 @@ CMakeFiles/xmc1302_firmware.elf.dir/src/main.cpp.obj: C:/Users/azlan.azman/Deskt
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_vadc_map.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h \
+  C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogACMP.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp \
   C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.h \
@@ -1153,6 +1850,8 @@ C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSI
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_intsup.h:
 
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.c:
+
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_acmp.c:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/sys/_locale.h:
@@ -1194,6 +1893,8 @@ C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSI
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/src/xmc_spi.c:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/main.cpp:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.c:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/CMSIS/Include/core_cm0.h:
 
@@ -1261,7 +1962,9 @@ C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCL
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Startup/system_XMC1300.c:
 
-C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.cpp:
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstring:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.cpp:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogACMP.hpp:
 
@@ -1285,6 +1988,54 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/math.h:
 
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_extern.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv_extern.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_extern.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_extern.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE_Common.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_extern.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADCData.h:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT/adc_measurement_conf.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ADC_MEASUREMENT_ADV/adc_measurement_adv.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ANALOG_IO/analog_io_conf.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.cpp:
+
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/AnalogADC.hpp:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/ButtonController.h:
@@ -1303,6 +2054,14 @@ C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/PowerContr
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/eeprom.h:
 
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/CLOCK_XMC1/clock_xmc1_conf.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/DAVE.c:
+
+C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/GLOBAL_ADC/global_adc_conf.c:
+
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/I2C_LCD.cpp:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/SPIProtocolController.cpp:
@@ -1318,8 +2077,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/lib/gcc/a
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/src/LCDOutput.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstdint:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/14.2\ rel1/arm-none-eabi/include/c++/14.2.1/cstring:
 
 C:/Users/azlan.azman/Desktop/tx_r8_gemini_github/WPT_TX_R8_GEMINI/Libraries/XMCLib/inc/xmc_wdt.h:
 
